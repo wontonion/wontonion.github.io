@@ -1,6 +1,6 @@
-defaults:
-  run:
-    working-directory: ./my-website
+# defaults:
+#   run:
+    # working-directory: ./my-website
 
 name: Deploy to GitHub Pages
 
