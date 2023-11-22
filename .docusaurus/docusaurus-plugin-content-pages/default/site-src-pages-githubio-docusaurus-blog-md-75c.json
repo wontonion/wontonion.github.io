@@ -1,0 +1,9 @@
+{
+  "type": "mdx",
+  "permalink": "/githubio-docusaurus-blog",
+  "source": "@site/src/pages/githubio-docusaurus-blog.md",
+  "title": "this is my first self-made markdown blog",
+  "description": "This blog is going to teach everyone how to build a github blog with URL like username.github.io with a popular document framework Docusaurus.",
+  "frontMatter": {},
+  "unlisted": false
+}
