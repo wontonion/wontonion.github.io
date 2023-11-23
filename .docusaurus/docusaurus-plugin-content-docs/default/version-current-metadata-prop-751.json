@@ -11,9 +11,23 @@
     "tutorialSidebar": [
       {
         "type": "link",
+        "label": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+        "href": "/docs/githubio-blog-with-docusaurus",
+        "docId": "githubio-docusaurus-blog",
+        "unlisted": false
+      },
+      {
+        "type": "link",
         "label": "Tutorial Intro",
         "href": "/docs/intro",
         "docId": "intro",
+        "unlisted": false
+      },
+      {
+        "type": "link",
+        "label": "iterm2-beautify",
+        "href": "/docs/iterm2-beautify",
+        "docId": "iterm2-beautify",
         "unlisted": false
       },
       {
@@ -89,27 +103,26 @@
           }
         ],
         "href": "/docs/category/tutorial---extras"
-      },
-      {
-        "type": "link",
-        "label": "this is my first self-made markdown blog",
-        "href": "/docs/githubio-docusaurus-blog",
-        "docId": "githubio-docusaurus-blog",
-        "unlisted": false
       }
     ]
   },
   "docs": {
     "githubio-docusaurus-blog": {
       "id": "githubio-docusaurus-blog",
-      "title": "this is my first self-made markdown blog",
-      "description": "This blog is going to teach everyone how to build a github blog with URL like username.github.io with a popular document framework Docusaurus.",
+      "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+      "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.",
       "sidebar": "tutorialSidebar"
     },
     "intro": {
       "id": "intro",
       "title": "Tutorial Intro",
       "description": "Let's discover Docusaurus in less than 5 minutes.",
+      "sidebar": "tutorialSidebar"
+    },
+    "iterm2-beautify": {
+      "id": "iterm2-beautify",
+      "title": "iterm2-beautify",
+      "description": "",
       "sidebar": "tutorialSidebar"
     },
     "tutorial-basics/congratulations": {

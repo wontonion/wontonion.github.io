@@ -8,16 +8,21 @@
           "label": "Next",
           "isLast": true,
           "path": "/docs",
-          "mainDocId": "intro",
+          "mainDocId": "githubio-docusaurus-blog",
           "docs": [
             {
               "id": "githubio-docusaurus-blog",
-              "path": "/docs/githubio-docusaurus-blog",
+              "path": "/docs/githubio-blog-with-docusaurus",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
               "path": "/docs/intro",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "iterm2-beautify",
+              "path": "/docs/iterm2-beautify",
               "sidebar": "tutorialSidebar"
             },
             {
@@ -75,8 +80,8 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
-                "label": "intro"
+                "path": "/docs/githubio-blog-with-docusaurus",
+                "label": "githubio-docusaurus-blog"
               }
             }
           }

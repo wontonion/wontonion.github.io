@@ -39,7 +39,7 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '76d'),
+    component: ComponentCreator('/blog', '3c3'),
     exact: true
   },
   {
@@ -50,6 +50,11 @@ export default [
   {
     path: '/blog/first-blog-post',
     component: ComponentCreator('/blog/first-blog-post', '49d'),
+    exact: true
+  },
+  {
+    path: '/blog/greetings',
+    component: ComponentCreator('/blog/greetings', '4b5'),
     exact: true
   },
   {
@@ -78,6 +83,11 @@ export default [
     exact: true
   },
   {
+    path: '/blog/tags/greetings',
+    component: ComponentCreator('/blog/tags/greetings', 'ba8'),
+    exact: true
+  },
+  {
     path: '/blog/tags/hello',
     component: ComponentCreator('/blog/tags/hello', 'a53'),
     exact: true
@@ -99,15 +109,40 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', 'ef4'),
+    component: ComponentCreator('/docs', '022'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '97b'),
+        component: ComponentCreator('/docs', '42d'),
         routes: [
           {
+            path: '/docs/tags',
+            component: ComponentCreator('/docs/tags', '0cc'),
+            exact: true
+          },
+          {
+            path: '/docs/tags/blog',
+            component: ComponentCreator('/docs/tags/blog', '63a'),
+            exact: true
+          },
+          {
+            path: '/docs/tags/docusaurus',
+            component: ComponentCreator('/docs/tags/docusaurus', 'ebb'),
+            exact: true
+          },
+          {
+            path: '/docs/tags/github',
+            component: ComponentCreator('/docs/tags/github', '326'),
+            exact: true
+          },
+          {
+            path: '/docs/tags/githubio',
+            component: ComponentCreator('/docs/tags/githubio', 'fef'),
+            exact: true
+          },
+          {
             path: '/docs',
-            component: ComponentCreator('/docs', '304'),
+            component: ComponentCreator('/docs', '2b1'),
             routes: [
               {
                 path: '/docs/category/tutorial---basics',
@@ -122,14 +157,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/githubio-docusaurus-blog',
-                component: ComponentCreator('/docs/githubio-docusaurus-blog', 'aa9'),
+                path: '/docs/githubio-blog-with-docusaurus',
+                component: ComponentCreator('/docs/githubio-blog-with-docusaurus', '051'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
                 path: '/docs/intro',
                 component: ComponentCreator('/docs/intro', 'aed'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/iterm2-beautify',
+                component: ComponentCreator('/docs/iterm2-beautify', 'a43'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

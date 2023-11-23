@@ -42,7 +42,7 @@
       "plugin": "plugin---docusaurus-debug-53-c-9b8"
     }
   },
-  "/blog-76d": {
+  "/blog-3c3": {
     "__comp": "__comp---theme-blog-list-pagea-6-a-7ba",
     "__context": {
       "plugin": "plugin---blogda-3-60b"
@@ -60,6 +60,9 @@
       },
       {
         "content": "content---blog-925-e00"
+      },
+      {
+        "content": "content---blogf-96-107"
       }
     ],
     "metadata": "metadata---blogb-2-b-df1"
@@ -78,6 +81,14 @@
     },
     "sidebar": "sidebar---blog-814-8ac",
     "content": "content---blog-first-blog-poste-27-4a1"
+  },
+  "/blog/greetings-4b5": {
+    "__comp": "__comp---theme-blog-post-pageccc-cab",
+    "__context": {
+      "plugin": "plugin---blogda-3-60b"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "content": "content---blog-greetingsa-7-a-c48"
   },
   "/blog/long-blog-post-d15": {
     "__comp": "__comp---theme-blog-post-pageccc-cab",
@@ -140,6 +151,20 @@
     "tag": "tag---blog-tags-facebook-031-c52",
     "listMetadata": "listMetadata---blog-tags-facebook-096-d31"
   },
+  "/blog/tags/greetings-ba8": {
+    "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
+    "__context": {
+      "plugin": "plugin---blogda-3-60b"
+    },
+    "sidebar": "sidebar---blog-814-8ac",
+    "items": [
+      {
+        "content": "content---blogf-96-107"
+      }
+    ],
+    "tag": "tag---blog-tags-greetingsce-0-3c2",
+    "listMetadata": "listMetadata---blog-tags-greetingsc-8-c-f35"
+  },
   "/blog/tags/hello-a53": {
     "__comp": "__comp---theme-blog-tags-posts-page-687-b6c",
     "__context": {
@@ -186,17 +211,37 @@
     },
     "content": "content---markdown-page-393-028"
   },
-  "/docs-ef4": {
+  "/docs-022": {
     "__comp": "__comp---theme-docs-root-5-e-9-0b6",
     "__context": {
       "plugin": "plugin---docsf-41-d7b"
     }
   },
-  "/docs-97b": {
+  "/docs-42d": {
     "__comp": "__comp---theme-doc-version-roota-7-b-5de",
     "version": "version---docs-935-398"
   },
-  "/docs-304": {
+  "/docs/tags-0cc": {
+    "__comp": "__comp---theme-doc-tags-list-page-372-89e",
+    "tags": "tags---docs-tags-559-5e5"
+  },
+  "/docs/tags/blog-63a": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "tag": "tag---docs-tags-blogf-92-4ea"
+  },
+  "/docs/tags/docusaurus-ebb": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "tag": "tag---docs-tags-docusaurus-317-a53"
+  },
+  "/docs/tags/github-326": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "tag": "tag---docs-tags-githubc-17-9df"
+  },
+  "/docs/tags/githubio-fef": {
+    "__comp": "__comp---theme-doc-tag-doc-list-pagedf-2-9f0",
+    "tag": "tag---docs-tags-githubioac-5-d95"
+  },
+  "/docs-2b1": {
     "__comp": "__comp---theme-doc-roota-94-67a"
   },
   "/docs/category/tutorial---basics-d44": {
@@ -207,13 +252,17 @@
     "__comp": "__comp---theme-doc-category-generated-index-page-14-e-640",
     "categoryGeneratedIndex": "categoryGeneratedIndex---docs-category-tutorial-extrasc-84-abc"
   },
-  "/docs/githubio-docusaurus-blog-aa9": {
+  "/docs/githubio-blog-with-docusaurus-051": {
     "__comp": "__comp---theme-doc-item-178-a40",
-    "content": "content---docs-githubio-docusaurus-blog-6-fc-b04"
+    "content": "content---docs-githubio-blog-with-docusaurus-360-848"
   },
   "/docs/intro-aed": {
     "__comp": "__comp---theme-doc-item-178-a40",
     "content": "content---docs-intro-0-e-3-be1"
+  },
+  "/docs/iterm2-beautify-a43": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---docs-iterm-2-beautifyd-7-b-8b9"
   },
   "/docs/tutorial-basics/congratulations-793": {
     "__comp": "__comp---theme-doc-item-178-a40",

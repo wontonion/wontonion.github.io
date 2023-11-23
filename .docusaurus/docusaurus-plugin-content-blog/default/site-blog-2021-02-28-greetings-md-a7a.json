@@ -1,0 +1,61 @@
+{
+  "permalink": "/blog/greetings",
+  "source": "@site/blog/2021-02-28-greetings.md",
+  "title": "Greetings!",
+  "description": "Congratulations, you have made your first post!",
+  "date": "2001-12-12T00:00:00.000Z",
+  "formattedDate": "December 12, 2001",
+  "tags": [
+    {
+      "label": "greetings",
+      "permalink": "/blog/tags/greetings"
+    }
+  ],
+  "readingTime": 0.1,
+  "hasTruncateMarker": false,
+  "authors": [
+    {
+      "name": "Joel Marcey",
+      "title": "Co-creator of Docusaurus 1",
+      "url": "https://github.com/JoelMarcey",
+      "image_url": "https://github.com/JoelMarcey.png",
+      "imageURL": "https://github.com/JoelMarcey.png"
+    },
+    {
+      "name": "Sébastien Lorber",
+      "title": "Docusaurus maintainer",
+      "url": "https://sebastienlorber.com",
+      "image_url": "https://github.com/slorber.png",
+      "imageURL": "https://github.com/slorber.png"
+    }
+  ],
+  "frontMatter": {
+    "slug": "greetings",
+    "title": "Greetings!",
+    "date": "2001-12-12T00:00:00.000Z",
+    "authors": [
+      {
+        "name": "Joel Marcey",
+        "title": "Co-creator of Docusaurus 1",
+        "url": "https://github.com/JoelMarcey",
+        "image_url": "https://github.com/JoelMarcey.png",
+        "imageURL": "https://github.com/JoelMarcey.png"
+      },
+      {
+        "name": "Sébastien Lorber",
+        "title": "Docusaurus maintainer",
+        "url": "https://sebastienlorber.com",
+        "image_url": "https://github.com/slorber.png",
+        "imageURL": "https://github.com/slorber.png"
+      }
+    ],
+    "tags": [
+      "greetings"
+    ]
+  },
+  "unlisted": false,
+  "prevItem": {
+    "title": "First Blog Post",
+    "permalink": "/blog/first-blog-post"
+  }
+}
