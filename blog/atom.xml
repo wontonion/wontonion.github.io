@@ -96,4 +96,22 @@
         <category label="hola" term="hola"/>
         <category label="docusaurus" term="docusaurus"/>
     </entry>
+    <entry>
+        <title type="html"><![CDATA[Greetings!]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/greetings</id>
+        <link href="https://your-docusaurus-site.example.com/blog/greetings"/>
+        <updated>2001-12-12T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Congratulations, you have made your first post!]]></summary>
+        <content type="html"><![CDATA[<p>Congratulations, you have made your first post!</p>
+<p>Feel free to play around and edit this post as much you like.</p>]]></content>
+        <author>
+            <name>Joel Marcey</name>
+            <uri>https://github.com/JoelMarcey</uri>
+        </author>
+        <author>
+            <name>Sébastien Lorber</name>
+            <uri>https://sebastienlorber.com</uri>
+        </author>
+        <category label="greetings" term="greetings"/>
+    </entry>
 </feed>

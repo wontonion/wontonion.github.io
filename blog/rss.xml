@@ -77,5 +77,15 @@
             <category>hola</category>
             <category>docusaurus</category>
         </item>
+        <item>
+            <title><![CDATA[Greetings!]]></title>
+            <link>https://your-docusaurus-site.example.com/blog/greetings</link>
+            <guid>https://your-docusaurus-site.example.com/blog/greetings</guid>
+            <pubDate>Wed, 12 Dec 2001 00:00:00 GMT</pubDate>
+            <description><![CDATA[Congratulations, you have made your first post!]]></description>
+            <content:encoded><![CDATA[<p>Congratulations, you have made your first post!</p>
+<p>Feel free to play around and edit this post as much you like.</p>]]></content:encoded>
+            <category>greetings</category>
+        </item>
     </channel>
 </rss>
