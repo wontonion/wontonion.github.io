@@ -4,40 +4,15 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "My Site",
-  "tagline": "Dinosaurs are cool",
+  "title": "Wontonion's Site ",
+  "tagline": "Log my tech life",
   "favicon": "img/favicon.ico",
-  "url": "https://your-docusaurus-site.example.com",
+  "url": "https://wontonion.github.io",
   "baseUrl": "/",
-  "organizationName": "facebook",
-  "projectName": "docusaurus",
+  "organizationName": "wontonion",
+  "projectName": "wontonion.github.io",
   "onBrokenLinks": "throw",
   "onBrokenMarkdownLinks": "warn",
-  "i18n": {
-    "defaultLocale": "en",
-    "locales": [
-      "en"
-    ],
-    "path": "i18n",
-    "localeConfigs": {}
-  },
-  "presets": [
-    [
-      "classic",
-      {
-        "docs": {
-          "showLastUpdateTime": true,
-          "sidebarPath": "./sidebars.ts"
-        },
-        "blog": {
-          "showReadingTime": true
-        },
-        "theme": {
-          "customCss": "./src/css/custom.css"
-        }
-      }
-    ]
-  ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
@@ -47,6 +22,9 @@ export default {
         "src": "img/logo.svg"
       },
       "items": [
+        {
+          "type": "localeDropdown"
+        },
         {
           "type": "docSidebar",
           "sidebarId": "tutorialSidebar",
@@ -63,8 +41,7 @@ export default {
           "label": "GitHub",
           "position": "right"
         }
-      ],
-      "hideOnScroll": false
+      ]
     },
     "footer": {
       "style": "dark",
@@ -302,38 +279,18 @@ export default {
             }
           }
         ]
-      },
-      "additionalLanguages": [],
-      "magicComments": [
-        {
-          "className": "theme-code-block-highlighted-line",
-          "line": "highlight-next-line",
-          "block": {
-            "start": "highlight-start",
-            "end": "highlight-end"
-          }
-        }
-      ]
-    },
-    "colorMode": {
-      "defaultMode": "light",
-      "disableSwitch": false,
-      "respectPrefersColorScheme": false
-    },
-    "docs": {
-      "versionPersistence": "localStorage",
-      "sidebar": {
-        "hideable": false,
-        "autoCollapseCategories": false
       }
-    },
-    "metadata": [],
-    "tableOfContents": {
-      "minHeadingLevel": 2,
-      "maxHeadingLevel": 3
     }
   },
   "baseUrlIssueBanner": true,
+  "i18n": {
+    "defaultLocale": "en",
+    "path": "i18n",
+    "locales": [
+      "en"
+    ],
+    "localeConfigs": {}
+  },
   "onDuplicateRoutes": "warn",
   "staticDirectories": [
     "static"
@@ -341,6 +298,7 @@ export default {
   "customFields": {},
   "plugins": [],
   "themes": [],
+  "presets": [],
   "scripts": [],
   "headTags": [],
   "stylesheets": [],
