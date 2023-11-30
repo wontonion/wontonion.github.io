@@ -20,9 +20,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: pnpm
+          cache: npm
 
       - name: Install dependencies
-        run: pnpm
+        run: npm ci
       - name: Test build website
-        run: pnpm build
+        run: npm run build
