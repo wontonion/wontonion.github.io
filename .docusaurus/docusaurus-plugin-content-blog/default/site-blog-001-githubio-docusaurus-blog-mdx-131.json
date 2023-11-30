@@ -1,0 +1,52 @@
+{
+  "permalink": "/blog/githubio-blog-with-docusaurus",
+  "source": "@site/blog/001-githubio-docusaurus-blog.mdx",
+  "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+  "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.",
+  "date": "2023-11-30T06:50:25.561Z",
+  "formattedDate": "November 30, 2023",
+  "tags": [
+    {
+      "label": "github",
+      "permalink": "/blog/tags/github"
+    },
+    {
+      "label": "githubio",
+      "permalink": "/blog/tags/githubio"
+    },
+    {
+      "label": "blog",
+      "permalink": "/blog/tags/blog"
+    },
+    {
+      "label": "docusaurus",
+      "permalink": "/blog/tags/docusaurus"
+    }
+  ],
+  "readingTime": 3.715,
+  "hasTruncateMarker": false,
+  "authors": [],
+  "frontMatter": {
+    "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+    "updated": "2023-11-22T00:00:00.000Z",
+    "slug": "/githubio-blog-with-docusaurus",
+    "tags": [
+      "github",
+      "githubio",
+      "blog",
+      "docusaurus"
+    ],
+    "keywords": [
+      "github",
+      "githubio",
+      "blog",
+      "docusaurus"
+    ],
+    "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account."
+  },
+  "unlisted": false,
+  "nextItem": {
+    "title": "Welcome",
+    "permalink": "/blog/welcome"
+  }
+}

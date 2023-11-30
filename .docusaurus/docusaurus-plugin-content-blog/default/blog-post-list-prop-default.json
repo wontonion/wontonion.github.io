@@ -2,6 +2,11 @@
   "title": "Recent posts",
   "items": [
     {
+      "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+      "permalink": "/blog/githubio-blog-with-docusaurus",
+      "unlisted": false
+    },
+    {
       "title": "Welcome",
       "permalink": "/blog/welcome",
       "unlisted": false
@@ -19,11 +24,6 @@
     {
       "title": "First Blog Post",
       "permalink": "/blog/first-blog-post",
-      "unlisted": false
-    },
-    {
-      "title": "Greetings!",
-      "permalink": "/blog/greetings",
       "unlisted": false
     }
   ]

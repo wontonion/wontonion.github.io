@@ -13,9 +13,9 @@
           "tagsPath": "/docs/tags",
           "isLast": true,
           "routePriority": -1,
-          "sidebarFilePath": "/Users/sieng/Documents/GitHub/wontonion.github.io/sidebars.ts",
-          "contentPath": "/Users/sieng/Documents/GitHub/wontonion.github.io/docs",
-          "contentPathLocalized": "/Users/sieng/Documents/GitHub/wontonion.github.io/i18n/en/docusaurus-plugin-content-docs/current",
+          "sidebarFilePath": "/home/oha/Github/wontonion.github.io/sidebars.ts",
+          "contentPath": "/home/oha/Github/wontonion.github.io/docs",
+          "contentPathLocalized": "/home/oha/Github/wontonion.github.io/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
               "id": "githubio-docusaurus-blog",
@@ -433,6 +433,62 @@
       "blogSidebarTitle": "Recent posts",
       "blogPosts": [
         {
+          "id": "/githubio-blog-with-docusaurus",
+          "metadata": {
+            "permalink": "/blog/githubio-blog-with-docusaurus",
+            "source": "@site/blog/001-githubio-docusaurus-blog.mdx",
+            "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+            "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.",
+            "date": "2023-11-30T06:50:25.561Z",
+            "formattedDate": "November 30, 2023",
+            "tags": [
+              {
+                "label": "github",
+                "permalink": "/blog/tags/github"
+              },
+              {
+                "label": "githubio",
+                "permalink": "/blog/tags/githubio"
+              },
+              {
+                "label": "blog",
+                "permalink": "/blog/tags/blog"
+              },
+              {
+                "label": "docusaurus",
+                "permalink": "/blog/tags/docusaurus"
+              }
+            ],
+            "readingTime": 3.715,
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {
+              "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+              "updated": "2023-11-22T00:00:00.000Z",
+              "slug": "/githubio-blog-with-docusaurus",
+              "tags": [
+                "github",
+                "githubio",
+                "blog",
+                "docusaurus"
+              ],
+              "keywords": [
+                "github",
+                "githubio",
+                "blog",
+                "docusaurus"
+              ],
+              "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account."
+            },
+            "unlisted": false,
+            "nextItem": {
+              "title": "Welcome",
+              "permalink": "/blog/welcome"
+            }
+          },
+          "content": "<!-- TODO 怎么引用在md/mdx里面引用description？ -->\n\n# Build a blog by utilizing **github.io** and **Docusaurus**\n\n\n## 1. 前期准备\n创建博客之前，我们应该先对环境和软件做一些准备：\n1. Github帐号\n2. 配置了和github互通的git环境，可参考[github官方文档](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)。或者使用github desktop。\n3. 一个终端。\n4. vscode 或其他编辑器\n5. 需要配置一下本地的nodejs环境，需要使用到npm这样的nodejs包管理工具，可自行搜索nodejs和npm的安装方式。npm在windows下有点问题，可以使用yarn。\n\n## 2. 原理解释\n1. 根据这个[链接](https://pages.github.com/)上的介绍，所有的github帐号都可以使用`username.github.io`这样一个网址来当作自己的免费域名。实现方法很简单，只需要创建一个名为`username.github.io`的repo即可。\n2. 由于docusaurus是一个静态网站框架，我们写完了博客的`.md`文件之后网站并不会自动更新，而是需要重新编译整个网站完成更新。我们既可以直接上传编译好的build文件，也可以通过Github Action来实现CI/CD。这里的CI/CD就是commit写好的`.md`文件之后，由github来自动帮助我们完成编译和部署。因后者比较优雅，故本教程使用后者。\n\n## 3. 具体步骤\n1. 可以先在github上创建一个`username.github.io`的仓库\n2. 使用git 命令/github desktop，把仓库拉取到本地。\n3. 进入仓库路径\n4. 根据[官方文档](https://docusaurus.io/docs/installation)的命令`npx create-docusaurus@latest my-website classic` 创建docursaurus应用，可以直接起名`my-website`。这个文件夹等下会删掉，问题不大，本文以该命令为准，使用`my-website`作为项目名称。\n5. 根据[官方文档](https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions)，在仓库目录中创建`.github`和`.github/workflows`两个文件夹。\n6. 在`.github/workflows`中，创建上面文档中的两个文件`github/workflows/deploy.yml`和`.github/workflows/test-deploy.yml`，其中这两个文件中的`yarn`命令需要根据自己的包管理工具进行修改，修改方式见下图\n   \n    ![Prompt for change yarn command to npm command](/img/docs/001-githubio-docusaurus-blog-image-0.png)\n\n7. 完成以上步骤后，把`my-website`中的所有文件剪切处理，放到和`.github`同一层下，如下图。然后可以删除空文件夹`my-website`。\n   \n    ![Tree structure of Operating folders](/img/docs/001-githubio-docusaurus-blog-image-1.png)\n\n8.  把仓库push到github上\n9.  push完成后浏览器登录账户，进入该仓库，进行如下配置\n![Github action setting](/img/docs/001-githubio-docusaurus-blog-image-2.png)。在该步骤中，可能步骤3的gh-pages没得选，需要等待github编译完成后才会出现，可以进入这里查看github action的编译进度。首次编译成功才会出现该分支。\n\n    ![Verify the compile status](/img/docs/001-githubio-docusaurus-blog-image-3.png)\n    \n10. 如果以上步骤顺利，等待github action编译完成就可以直接在浏览器地址栏输入网址`username.github.io`进行查看，现在应该看到的是docusaurus的tutorilal页面。`username`当然是你自己的github账户名字，不会看到这里才明白吧。"
+        },
+        {
           "id": "welcome",
           "metadata": {
             "permalink": "/blog/welcome",
@@ -487,6 +543,10 @@
               ]
             },
             "unlisted": false,
+            "prevItem": {
+              "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+              "permalink": "/blog/githubio-blog-with-docusaurus"
+            },
             "nextItem": {
               "title": "MDX Blog Post",
               "permalink": "/blog/mdx-blog-post"
@@ -719,6 +779,7 @@
       "blogListPaginated": [
         {
           "items": [
+            "/githubio-blog-with-docusaurus",
             "welcome",
             "mdx-blog-post",
             "long-blog-post",
@@ -730,13 +791,117 @@
             "page": 1,
             "postsPerPage": 10,
             "totalPages": 1,
-            "totalCount": 5,
+            "totalCount": 6,
             "blogDescription": "Blog",
             "blogTitle": "Blog"
           }
         }
       ],
       "blogTags": {
+        "/blog/tags/github": {
+          "label": "github",
+          "items": [
+            "/githubio-blog-with-docusaurus"
+          ],
+          "permalink": "/blog/tags/github",
+          "pages": [
+            {
+              "items": [
+                "/githubio-blog-with-docusaurus"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/github",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/githubio": {
+          "label": "githubio",
+          "items": [
+            "/githubio-blog-with-docusaurus"
+          ],
+          "permalink": "/blog/tags/githubio",
+          "pages": [
+            {
+              "items": [
+                "/githubio-blog-with-docusaurus"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/githubio",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/blog": {
+          "label": "blog",
+          "items": [
+            "/githubio-blog-with-docusaurus"
+          ],
+          "permalink": "/blog/tags/blog",
+          "pages": [
+            {
+              "items": [
+                "/githubio-blog-with-docusaurus"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/blog",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 1,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
+        "/blog/tags/docusaurus": {
+          "label": "docusaurus",
+          "items": [
+            "/githubio-blog-with-docusaurus",
+            "welcome",
+            "mdx-blog-post",
+            "long-blog-post",
+            "first-blog-post"
+          ],
+          "permalink": "/blog/tags/docusaurus",
+          "pages": [
+            {
+              "items": [
+                "/githubio-blog-with-docusaurus",
+                "welcome",
+                "mdx-blog-post",
+                "long-blog-post",
+                "first-blog-post"
+              ],
+              "metadata": {
+                "permalink": "/blog/tags/docusaurus",
+                "page": 1,
+                "postsPerPage": 10,
+                "totalPages": 1,
+                "totalCount": 5,
+                "blogDescription": "Blog",
+                "blogTitle": "Blog"
+              }
+            }
+          ],
+          "unlisted": false
+        },
         "/blog/tags/facebook": {
           "label": "facebook",
           "items": [
@@ -780,36 +945,6 @@
                 "postsPerPage": 10,
                 "totalPages": 1,
                 "totalCount": 2,
-                "blogDescription": "Blog",
-                "blogTitle": "Blog"
-              }
-            }
-          ],
-          "unlisted": false
-        },
-        "/blog/tags/docusaurus": {
-          "label": "docusaurus",
-          "items": [
-            "welcome",
-            "mdx-blog-post",
-            "long-blog-post",
-            "first-blog-post"
-          ],
-          "permalink": "/blog/tags/docusaurus",
-          "pages": [
-            {
-              "items": [
-                "welcome",
-                "mdx-blog-post",
-                "long-blog-post",
-                "first-blog-post"
-              ],
-              "metadata": {
-                "permalink": "/blog/tags/docusaurus",
-                "page": 1,
-                "postsPerPage": 10,
-                "totalPages": 1,
-                "totalCount": 4,
                 "blogDescription": "Blog",
                 "blogTitle": "Blog"
               }

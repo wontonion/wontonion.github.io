@@ -1,0 +1,46 @@
+---
+title: 使用 github.io 和 Docusaurus 搭建个人博客网站
+updated: 2023-11-22
+slug: /githubio-blog-with-docusaurus
+tags: [github, githubio,blog, docusaurus]
+keywords: [github, githubio,blog, docusaurus]
+description: This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.
+---
+<!-- TODO 怎么引用在md/mdx里面引用description？ -->
+
+# Build a blog by utilizing **github.io** and **Docusaurus**
+
+
+## 1. 前期准备
+创建博客之前，我们应该先对环境和软件做一些准备：
+1. Github帐号
+2. 配置了和github互通的git环境，可参考[github官方文档](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account)。或者使用github desktop。
+3. 一个终端。
+4. vscode 或其他编辑器
+5. 需要配置一下本地的nodejs环境，需要使用到npm这样的nodejs包管理工具，可自行搜索nodejs和npm的安装方式。npm在windows下有点问题，可以使用yarn。
+
+## 2. 原理解释
+1. 根据这个[链接](https://pages.github.com/)上的介绍，所有的github帐号都可以使用`username.github.io`这样一个网址来当作自己的免费域名。实现方法很简单，只需要创建一个名为`username.github.io`的repo即可。
+2. 由于docusaurus是一个静态网站框架，我们写完了博客的`.md`文件之后网站并不会自动更新，而是需要重新编译整个网站完成更新。我们既可以直接上传编译好的build文件，也可以通过Github Action来实现CI/CD。这里的CI/CD就是commit写好的`.md`文件之后，由github来自动帮助我们完成编译和部署。因后者比较优雅，故本教程使用后者。
+
+## 3. 具体步骤
+1. 可以先在github上创建一个`username.github.io`的仓库
+2. 使用git 命令/github desktop，把仓库拉取到本地。
+3. 进入仓库路径
+4. 根据[官方文档](https://docusaurus.io/docs/installation)的命令`npx create-docusaurus@latest my-website classic` 创建docursaurus应用，可以直接起名`my-website`。这个文件夹等下会删掉，问题不大，本文以该命令为准，使用`my-website`作为项目名称。
+5. 根据[官方文档](https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions)，在仓库目录中创建`.github`和`.github/workflows`两个文件夹。
+6. 在`.github/workflows`中，创建上面文档中的两个文件`github/workflows/deploy.yml`和`.github/workflows/test-deploy.yml`，其中这两个文件中的`yarn`命令需要根据自己的包管理工具进行修改，修改方式见下图
+   
+    ![Prompt for change yarn command to npm command](/img/docs/001-githubio-docusaurus-blog-image-0.png)
+
+7. 完成以上步骤后，把`my-website`中的所有文件剪切处理，放到和`.github`同一层下，如下图。然后可以删除空文件夹`my-website`。
+   
+    ![Tree structure of Operating folders](/img/docs/001-githubio-docusaurus-blog-image-1.png)
+
+8.  把仓库push到github上
+9.  push完成后浏览器登录账户，进入该仓库，进行如下配置
+![Github action setting](/img/docs/001-githubio-docusaurus-blog-image-2.png)。在该步骤中，可能步骤3的gh-pages没得选，需要等待github编译完成后才会出现，可以进入这里查看github action的编译进度。首次编译成功才会出现该分支。
+
+    ![Verify the compile status](/img/docs/001-githubio-docusaurus-blog-image-3.png)
+    
+10. 如果以上步骤顺利，等待github action编译完成就可以直接在浏览器地址栏输入网址`username.github.io`进行查看，现在应该看到的是docusaurus的tutorilal页面。`username`当然是你自己的github账户名字，不会看到这里才明白吧。
