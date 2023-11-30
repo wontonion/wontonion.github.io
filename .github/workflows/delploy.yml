@@ -1,6 +1,6 @@
 # defaults:
 #   run:
-    # working-directory: ./my-website
+# working-directory: ./my-website
 
 name: Deploy to GitHub Pages
 
@@ -23,12 +23,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          cache: npm
+          cache: pnpm
 
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
       - name: Build website
-        run: npm run build
+        run: pnpm build
 
       # Popular action to deploy to GitHub Pages:
       # Docs: https://github.com/peaceiris/actions-gh-pages#%EF%B8%8F-docusaurus
