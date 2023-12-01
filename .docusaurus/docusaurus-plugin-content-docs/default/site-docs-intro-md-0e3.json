@@ -1,7 +1,7 @@
 {
   "id": "intro",
-  "title": "Tutorial Intro",
-  "description": "Let's discover Docusaurus in less than 5 minutes.",
+  "title": "This is introdution page of blog",
+  "description": "",
   "source": "@site/docs/intro.md",
   "sourceDirName": ".",
   "slug": "/intro",
@@ -12,16 +12,9 @@
   "version": "current",
   "lastUpdatedAt": 1539502055,
   "formattedLastUpdatedAt": "Oct 14, 2018",
-  "sidebarPosition": 1,
-  "frontMatter": {
-    "sidebar_position": 1
-  },
+  "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
-    "permalink": "/docs/githubio-blog-with-docusaurus"
-  },
-  "next": {
     "title": "iterm2-beautify",
     "permalink": "/docs/iterm2-beautify"
   }
