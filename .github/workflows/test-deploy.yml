@@ -2,35 +2,30 @@
 # #   run:
 # #     working-directory: ./my-website
 
-# name: Test deployment
+name: Test deployment
 
-# on:
-#   pull_request:
-#     branches:
-#       - main
-#     # Review gh actions docs if you want to further define triggers, paths, etc
-#     # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+on:
+  pull_request:
+    branches:
+      - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
 
-# jobs:
-#   test-deploy:
-#     name: Test deployment
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v4
-#       - uses: pnpm/action-setup@v2
-#         with:
-#           version: 6.32.9
-#       - uses: actions/setup-node@v4
-#         with:
-#           node-version: '20'
-#           cache: 'pnpm'
-#       # - uses: actions/checkout@v4
-#       # - uses: actions/setup-node@v4
-#       #   with:
-#       #     node-version: 20
-#       #     cache: pnpm
-
-#       - name: Install dependencies
-#         run: pnpm
-#       - name: Test build website
-#         run: pnpm build
+jobs:
+  test-deploy:
+    name: Test deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+          
+      - name: Install dependencies
+        run: pnpm
+      - name: Test build website
+        run: pnpm build

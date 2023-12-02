@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to GitHub IO Pages
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -32,7 +32,7 @@ jobs:
       #   with:
       #     node-version: 20
       #     cache: pnpm
-
+# 
       - name: Install dependencies
         run: pnpm install
       - name: Build website
