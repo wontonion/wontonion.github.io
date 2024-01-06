@@ -10,5 +10,9 @@
   "hasTruncateMarker": false,
   "authors": [],
   "frontMatter": {},
-  "unlisted": false
+  "unlisted": false,
+  "prevItem": {
+    "title": "使用TypeScript作为全栈开发的准备",
+    "permalink": "/blog/2023/12/03/TS-dev-env-preparation"
+  }
 }

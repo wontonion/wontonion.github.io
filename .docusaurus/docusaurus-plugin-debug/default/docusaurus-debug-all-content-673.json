@@ -18,6 +18,281 @@
           "contentPathLocalized": "/home/oha/Github/wontonion.github.io/i18n/en/docusaurus-plugin-content-docs/current",
           "docs": [
             {
+              "id": "002-01-terminal-beautify",
+              "title": "美化你的终端",
+              "description": "1. 为什么要进行终端美化",
+              "source": "@site/docs/002-01-terminal-beautify.md",
+              "sourceDirName": ".",
+              "slug": "/002-01-terminal-beautify",
+              "permalink": "/docs/002-01-terminal-beautify",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Active Record and Data Mapper",
+                "permalink": "/docs/note-for-typeorm"
+              },
+              "next": {
+                "title": "管理ssh key的良好实践",
+                "permalink": "/docs/002-02-git-management"
+              }
+            },
+            {
+              "id": "002-02-git-management",
+              "title": "管理ssh key的良好实践",
+              "description": "",
+              "source": "@site/docs/002-02-git-management.md",
+              "sourceDirName": ".",
+              "slug": "/002-02-git-management",
+              "permalink": "/docs/002-02-git-management",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "美化你的终端",
+                "permalink": "/docs/002-01-terminal-beautify"
+              },
+              "next": {
+                "title": "Install Node.js and pnpm",
+                "permalink": "/docs/002-03-install-nodejs-and-pnpm"
+              }
+            },
+            {
+              "id": "002-03-install-nodejs-and-pnpm",
+              "title": "Install Node.js and pnpm",
+              "description": "Steps",
+              "source": "@site/docs/002-03-install-nodejs-and-pnpm.md",
+              "sourceDirName": ".",
+              "slug": "/002-03-install-nodejs-and-pnpm",
+              "permalink": "/docs/002-03-install-nodejs-and-pnpm",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "管理ssh key的良好实践",
+                "permalink": "/docs/002-02-git-management"
+              },
+              "next": {
+                "title": "Code with JavaScript program with TypeScript",
+                "permalink": "/docs/002-04-add-TS-support"
+              }
+            },
+            {
+              "id": "002-04-add-TS-support",
+              "title": "Code with JavaScript program with TypeScript",
+              "description": "Especially for front-end framework. NestJs (the back-end framework) support TS originally.",
+              "source": "@site/docs/002-04-add-TS-support.md",
+              "sourceDirName": ".",
+              "slug": "/002-04-add-TS-support",
+              "permalink": "/docs/002-04-add-TS-support",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Install Node.js and pnpm",
+                "permalink": "/docs/002-03-install-nodejs-and-pnpm"
+              },
+              "next": {
+                "title": "使用swc作为ts编译器",
+                "permalink": "/docs/003-01-use-swc-compile-ts"
+              }
+            },
+            {
+              "id": "003-01-use-swc-compile-ts",
+              "title": "使用swc作为ts编译器",
+              "description": "传统的tsc也不是不能用，swc更快一点，而且基本out-of-box",
+              "source": "@site/docs/003-01-use-swc-compile-ts.md",
+              "sourceDirName": ".",
+              "slug": "/003-01-use-swc-compile-ts",
+              "permalink": "/docs/003-01-use-swc-compile-ts",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "Code with JavaScript program with TypeScript",
+                "permalink": "/docs/002-04-add-TS-support"
+              },
+              "next": {
+                "title": "替换默认的http服务器为fastify以增加响应速度",
+                "permalink": "/docs/003-02-replace-express-to-fastify"
+              }
+            },
+            {
+              "id": "003-02-replace-express-to-fastify",
+              "title": "替换默认的http服务器为fastify以增加响应速度",
+              "description": "pnpm add fastify @nestjs/platform-fastify",
+              "source": "@site/docs/003-02-replace-express-to-fastify.md",
+              "sourceDirName": ".",
+              "slug": "/003-02-replace-express-to-fastify",
+              "permalink": "/docs/003-02-replace-express-to-fastify",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "使用swc作为ts编译器",
+                "permalink": "/docs/003-01-use-swc-compile-ts"
+              },
+              "next": {
+                "title": "自定义provider",
+                "permalink": "/docs/003-03-01-self-defined-provider"
+              }
+            },
+            {
+              "id": "003-03-01-self-defined-provider",
+              "title": "自定义provider",
+              "description": "",
+              "source": "@site/docs/003-03-01-self-defined-provider.md",
+              "sourceDirName": ".",
+              "slug": "/003-03-01-self-defined-provider",
+              "permalink": "/docs/003-03-01-self-defined-provider",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "替换默认的http服务器为fastify以增加响应速度",
+                "permalink": "/docs/003-02-replace-express-to-fastify"
+              },
+              "next": {
+                "title": "使用fowardRef()解决循环依赖问题",
+                "permalink": "/docs/003-03-02-circular-dependency"
+              }
+            },
+            {
+              "id": "003-03-02-circular-dependency",
+              "title": "使用fowardRef()解决循环依赖问题",
+              "description": "先创建两个服务",
+              "source": "@site/docs/003-03-02-circular-dependency.md",
+              "sourceDirName": ".",
+              "slug": "/003-03-02-circular-dependency",
+              "permalink": "/docs/003-03-02-circular-dependency",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "自定义provider",
+                "permalink": "/docs/003-03-01-self-defined-provider"
+              },
+              "next": {
+                "title": "The Injection scopes",
+                "permalink": "/docs/003-03-03-inject-scope"
+              }
+            },
+            {
+              "id": "003-03-03-inject-scope",
+              "title": "The Injection scopes",
+              "description": "Three scopes:",
+              "source": "@site/docs/003-03-03-inject-scope.md",
+              "sourceDirName": ".",
+              "slug": "/003-03-03-inject-scope",
+              "permalink": "/docs/003-03-03-inject-scope",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "使用fowardRef()解决循环依赖问题",
+                "permalink": "/docs/003-03-02-circular-dependency"
+              },
+              "next": {
+                "title": "003-03-NestJS-providers",
+                "permalink": "/docs/003-03-NestJS-providers"
+              }
+            },
+            {
+              "id": "003-03-NestJS-providers",
+              "title": "003-03-NestJS-providers",
+              "description": "",
+              "source": "@site/docs/003-03-NestJS-providers.md",
+              "sourceDirName": ".",
+              "slug": "/003-03-NestJS-providers",
+              "permalink": "/docs/003-03-NestJS-providers",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "The Injection scopes",
+                "permalink": "/docs/003-03-03-inject-scope"
+              },
+              "next": {
+                "title": "module 属性",
+                "permalink": "/docs/003-04-module-attribute"
+              }
+            },
+            {
+              "id": "003-04-module-attribute",
+              "title": "module 属性",
+              "description": "https://docs.nestjs.com/modules#shared-modules",
+              "source": "@site/docs/003-04-module-attribute.md",
+              "sourceDirName": ".",
+              "slug": "/003-04-module-attribute",
+              "permalink": "/docs/003-04-module-attribute",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "003-03-NestJS-providers",
+                "permalink": "/docs/003-03-NestJS-providers"
+              },
+              "next": {
+                "title": "This is introdution page of blog",
+                "permalink": "/docs/intro"
+              }
+            },
+            {
               "id": "githubio-docusaurus-blog",
               "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
               "description": "This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.",
@@ -69,8 +344,8 @@
               },
               "sidebar": "tutorialSidebar",
               "next": {
-                "title": "iterm2-beautify",
-                "permalink": "/docs/iterm2-beautify"
+                "title": "程序员新手村任务",
+                "permalink": "/docs/preparation-for-novice-programmer"
               }
             },
             {
@@ -90,18 +365,70 @@
               "frontMatter": {},
               "sidebar": "tutorialSidebar",
               "previous": {
-                "title": "iterm2-beautify",
-                "permalink": "/docs/iterm2-beautify"
+                "title": "module 属性",
+                "permalink": "/docs/003-04-module-attribute"
               }
             },
             {
-              "id": "iterm2-beautify",
-              "title": "iterm2-beautify",
+              "id": "NestJS-learning-note",
+              "title": "NestJS-learning-note",
               "description": "",
-              "source": "@site/docs/002-iterm2-beautify.md",
+              "source": "@site/docs/003-NestJS-learning-note.md",
               "sourceDirName": ".",
-              "slug": "/iterm2-beautify",
-              "permalink": "/docs/iterm2-beautify",
+              "slug": "/NestJS-learning-note",
+              "permalink": "/docs/NestJS-learning-note",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 3,
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "程序员新手村任务",
+                "permalink": "/docs/preparation-for-novice-programmer"
+              },
+              "next": {
+                "title": "Active Record and Data Mapper",
+                "permalink": "/docs/note-for-typeorm"
+              }
+            },
+            {
+              "id": "note-for-typeorm",
+              "title": "Active Record and Data Mapper",
+              "description": "两种模式是什么，有什么区别",
+              "source": "@site/docs/004-note-for-typeorm.md",
+              "sourceDirName": ".",
+              "slug": "/note-for-typeorm",
+              "permalink": "/docs/note-for-typeorm",
+              "draft": false,
+              "unlisted": false,
+              "tags": [],
+              "version": "current",
+              "lastUpdatedAt": 1539502055,
+              "formattedLastUpdatedAt": "Oct 14, 2018",
+              "sidebarPosition": 4,
+              "frontMatter": {},
+              "sidebar": "tutorialSidebar",
+              "previous": {
+                "title": "NestJS-learning-note",
+                "permalink": "/docs/NestJS-learning-note"
+              },
+              "next": {
+                "title": "美化你的终端",
+                "permalink": "/docs/002-01-terminal-beautify"
+              }
+            },
+            {
+              "id": "preparation-for-novice-programmer",
+              "title": "程序员新手村任务",
+              "description": "本文档旨在分享一些个人认为在本地电脑上进行程序开发前需要了解的一些基础知识和管理实践，希望能够帮助读者从整体上了解本地开发环境的搭建。",
+              "source": "@site/docs/002-preparation-for-novice-programmer.md",
+              "sourceDirName": ".",
+              "slug": "/preparation-for-novice-programmer",
+              "permalink": "/docs/preparation-for-novice-programmer",
               "draft": false,
               "unlisted": false,
               "tags": [],
@@ -116,8 +443,8 @@
                 "permalink": "/docs/githubio-blog-with-docusaurus"
               },
               "next": {
-                "title": "This is introdution page of blog",
-                "permalink": "/docs/intro"
+                "title": "NestJS-learning-note",
+                "permalink": "/docs/NestJS-learning-note"
               }
             }
           ],
@@ -130,7 +457,59 @@
               },
               {
                 "type": "doc",
-                "id": "iterm2-beautify"
+                "id": "preparation-for-novice-programmer"
+              },
+              {
+                "type": "doc",
+                "id": "NestJS-learning-note"
+              },
+              {
+                "type": "doc",
+                "id": "note-for-typeorm"
+              },
+              {
+                "type": "doc",
+                "id": "002-01-terminal-beautify"
+              },
+              {
+                "type": "doc",
+                "id": "002-02-git-management"
+              },
+              {
+                "type": "doc",
+                "id": "002-03-install-nodejs-and-pnpm"
+              },
+              {
+                "type": "doc",
+                "id": "002-04-add-TS-support"
+              },
+              {
+                "type": "doc",
+                "id": "003-01-use-swc-compile-ts"
+              },
+              {
+                "type": "doc",
+                "id": "003-02-replace-express-to-fastify"
+              },
+              {
+                "type": "doc",
+                "id": "003-03-01-self-defined-provider"
+              },
+              {
+                "type": "doc",
+                "id": "003-03-02-circular-dependency"
+              },
+              {
+                "type": "doc",
+                "id": "003-03-03-inject-scope"
+              },
+              {
+                "type": "doc",
+                "id": "003-03-NestJS-providers"
+              },
+              {
+                "type": "doc",
+                "id": "003-04-module-attribute"
               },
               {
                 "type": "doc",
@@ -147,6 +526,28 @@
       "blogSidebarTitle": "Recent posts",
       "blogPosts": [
         {
+          "id": "/2023/12/03/TS-dev-env-preparation",
+          "metadata": {
+            "permalink": "/blog/2023/12/03/TS-dev-env-preparation",
+            "source": "@site/blog/2023-12-03-TS-dev-env-preparation.md",
+            "title": "使用TypeScript作为全栈开发的准备",
+            "description": "TS code formatter",
+            "date": "2023-12-03T00:00:00.000Z",
+            "formattedDate": "December 3, 2023",
+            "tags": [],
+            "readingTime": 0.07,
+            "hasTruncateMarker": false,
+            "authors": [],
+            "frontMatter": {},
+            "unlisted": false,
+            "nextItem": {
+              "title": "hello-blog",
+              "permalink": "/blog/2023/12/01/hello-blog"
+            }
+          },
+          "content": "TS code formatter\n- Eslint\n- Prettier\nCSS code formatter\n- stylelint\n- (Tailwind)"
+        },
+        {
           "id": "/2023/12/01/hello-blog",
           "metadata": {
             "permalink": "/blog/2023/12/01/hello-blog",
@@ -160,7 +561,11 @@
             "hasTruncateMarker": false,
             "authors": [],
             "frontMatter": {},
-            "unlisted": false
+            "unlisted": false,
+            "prevItem": {
+              "title": "使用TypeScript作为全栈开发的准备",
+              "permalink": "/blog/2023/12/03/TS-dev-env-preparation"
+            }
           },
           "content": "this is first blog for the website"
         }
@@ -168,6 +573,7 @@
       "blogListPaginated": [
         {
           "items": [
+            "/2023/12/03/TS-dev-env-preparation",
             "/2023/12/01/hello-blog"
           ],
           "metadata": {
@@ -175,7 +581,7 @@
             "page": 1,
             "postsPerPage": 10,
             "totalPages": 1,
-            "totalCount": 1,
+            "totalCount": 2,
             "blogDescription": "Blog",
             "blogTitle": "Blog"
           }

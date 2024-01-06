@@ -39,12 +39,17 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '926'),
+    component: ComponentCreator('/blog', '475'),
     exact: true
   },
   {
     path: '/blog/2023/12/01/hello-blog',
     component: ComponentCreator('/blog/2023/12/01/hello-blog', 'bfd'),
+    exact: true
+  },
+  {
+    path: '/blog/2023/12/03/TS-dev-env-preparation',
+    component: ComponentCreator('/blog/2023/12/03/TS-dev-env-preparation', '5e5'),
     exact: true
   },
   {
@@ -59,11 +64,11 @@ export default [
   },
   {
     path: '/docs',
-    component: ComponentCreator('/docs', '29a'),
+    component: ComponentCreator('/docs', '337'),
     routes: [
       {
         path: '/docs',
-        component: ComponentCreator('/docs', '0e1'),
+        component: ComponentCreator('/docs', '6ec'),
         routes: [
           {
             path: '/docs/tags',
@@ -92,8 +97,74 @@ export default [
           },
           {
             path: '/docs',
-            component: ComponentCreator('/docs', 'ecb'),
+            component: ComponentCreator('/docs', 'b84'),
             routes: [
+              {
+                path: '/docs/002-01-terminal-beautify',
+                component: ComponentCreator('/docs/002-01-terminal-beautify', 'b79'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/002-02-git-management',
+                component: ComponentCreator('/docs/002-02-git-management', '4e7'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/002-03-install-nodejs-and-pnpm',
+                component: ComponentCreator('/docs/002-03-install-nodejs-and-pnpm', '8cb'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/002-04-add-TS-support',
+                component: ComponentCreator('/docs/002-04-add-TS-support', '527'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-01-use-swc-compile-ts',
+                component: ComponentCreator('/docs/003-01-use-swc-compile-ts', 'd7b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-02-replace-express-to-fastify',
+                component: ComponentCreator('/docs/003-02-replace-express-to-fastify', '588'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-03-01-self-defined-provider',
+                component: ComponentCreator('/docs/003-03-01-self-defined-provider', '8a0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-03-02-circular-dependency',
+                component: ComponentCreator('/docs/003-03-02-circular-dependency', 'ab9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-03-03-inject-scope',
+                component: ComponentCreator('/docs/003-03-03-inject-scope', '88b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-03-NestJS-providers',
+                component: ComponentCreator('/docs/003-03-NestJS-providers', 'b04'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/003-04-module-attribute',
+                component: ComponentCreator('/docs/003-04-module-attribute', '4d4'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
               {
                 path: '/docs/githubio-blog-with-docusaurus',
                 component: ComponentCreator('/docs/githubio-blog-with-docusaurus', '051'),
@@ -107,8 +178,20 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/iterm2-beautify',
-                component: ComponentCreator('/docs/iterm2-beautify', 'a43'),
+                path: '/docs/NestJS-learning-note',
+                component: ComponentCreator('/docs/NestJS-learning-note', 'aac'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/note-for-typeorm',
+                component: ComponentCreator('/docs/note-for-typeorm', '890'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/docs/preparation-for-novice-programmer',
+                component: ComponentCreator('/docs/preparation-for-novice-programmer', 'a1c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

@@ -1,11 +1,11 @@
 {
-  "id": "intro",
-  "title": "This is introdution page of blog",
+  "id": "003-03-NestJS-providers",
+  "title": "003-03-NestJS-providers",
   "description": "",
-  "source": "@site/docs/intro.md",
+  "source": "@site/docs/003-03-NestJS-providers.md",
   "sourceDirName": ".",
-  "slug": "/intro",
-  "permalink": "/docs/intro",
+  "slug": "/003-03-NestJS-providers",
+  "permalink": "/docs/003-03-NestJS-providers",
   "draft": false,
   "unlisted": false,
   "tags": [],
@@ -15,6 +15,10 @@
   "frontMatter": {},
   "sidebar": "tutorialSidebar",
   "previous": {
+    "title": "The Injection scopes",
+    "permalink": "/docs/003-03-03-inject-scope"
+  },
+  "next": {
     "title": "module 属性",
     "permalink": "/docs/003-04-module-attribute"
   }

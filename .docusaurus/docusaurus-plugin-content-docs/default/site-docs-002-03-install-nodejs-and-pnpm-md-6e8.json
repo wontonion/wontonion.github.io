@@ -1,0 +1,25 @@
+{
+  "id": "002-03-install-nodejs-and-pnpm",
+  "title": "Install Node.js and pnpm",
+  "description": "Steps",
+  "source": "@site/docs/002-03-install-nodejs-and-pnpm.md",
+  "sourceDirName": ".",
+  "slug": "/002-03-install-nodejs-and-pnpm",
+  "permalink": "/docs/002-03-install-nodejs-and-pnpm",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "管理ssh key的良好实践",
+    "permalink": "/docs/002-02-git-management"
+  },
+  "next": {
+    "title": "Code with JavaScript program with TypeScript",
+    "permalink": "/docs/002-04-add-TS-support"
+  }
+}

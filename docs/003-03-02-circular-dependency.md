@@ -1,9 +1,11 @@
 # 使用`fowardRef()`解决循环依赖问题
+
 先创建两个服务
 `nest g pr modules/example/services/fifth.service --no-spec --flat`
 `nest g pr modules/example/services/sixth.service --no-spec --flat`
 
 然后实现一下
+```javaScript
 // src/modules/example/services/fifth.service.ts
 
 @Injectable()
@@ -30,9 +32,10 @@ export class SixthService {
         return `循环依赖2`;
     }
 }
-
+```
 也可以在module之间这么用，但是不建议这么用
-```javascript
+
+```javaScript
 @Module({
     imports: [forwardRef(()=>CatsModule)]
 })

@@ -1,6 +1,28 @@
 {
   "blogPosts": [
     {
+      "id": "/2023/12/03/TS-dev-env-preparation",
+      "metadata": {
+        "permalink": "/blog/2023/12/03/TS-dev-env-preparation",
+        "source": "@site/blog/2023-12-03-TS-dev-env-preparation.md",
+        "title": "使用TypeScript作为全栈开发的准备",
+        "description": "TS code formatter",
+        "date": "2023-12-03T00:00:00.000Z",
+        "formattedDate": "December 3, 2023",
+        "tags": [],
+        "readingTime": 0.07,
+        "hasTruncateMarker": false,
+        "authors": [],
+        "frontMatter": {},
+        "unlisted": false,
+        "nextItem": {
+          "title": "hello-blog",
+          "permalink": "/blog/2023/12/01/hello-blog"
+        }
+      },
+      "content": "TS code formatter\n- Eslint\n- Prettier\nCSS code formatter\n- stylelint\n- (Tailwind)"
+    },
+    {
       "id": "/2023/12/01/hello-blog",
       "metadata": {
         "permalink": "/blog/2023/12/01/hello-blog",
@@ -14,7 +36,11 @@
         "hasTruncateMarker": false,
         "authors": [],
         "frontMatter": {},
-        "unlisted": false
+        "unlisted": false,
+        "prevItem": {
+          "title": "使用TypeScript作为全栈开发的准备",
+          "permalink": "/blog/2023/12/03/TS-dev-env-preparation"
+        }
       },
       "content": "this is first blog for the website"
     }

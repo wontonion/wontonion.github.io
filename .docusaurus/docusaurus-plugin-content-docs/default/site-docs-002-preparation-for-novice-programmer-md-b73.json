@@ -1,0 +1,26 @@
+{
+  "id": "preparation-for-novice-programmer",
+  "title": "程序员新手村任务",
+  "description": "本文档旨在分享一些个人认为在本地电脑上进行程序开发前需要了解的一些基础知识和管理实践，希望能够帮助读者从整体上了解本地开发环境的搭建。",
+  "source": "@site/docs/002-preparation-for-novice-programmer.md",
+  "sourceDirName": ".",
+  "slug": "/preparation-for-novice-programmer",
+  "permalink": "/docs/preparation-for-novice-programmer",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "sidebarPosition": 2,
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "使用 github.io 和 Docusaurus 搭建个人博客网站",
+    "permalink": "/docs/githubio-blog-with-docusaurus"
+  },
+  "next": {
+    "title": "NestJS-learning-note",
+    "permalink": "/docs/NestJS-learning-note"
+  }
+}

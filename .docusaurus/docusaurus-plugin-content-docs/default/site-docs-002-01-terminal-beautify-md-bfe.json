@@ -1,0 +1,25 @@
+{
+  "id": "002-01-terminal-beautify",
+  "title": "美化你的终端",
+  "description": "1. 为什么要进行终端美化",
+  "source": "@site/docs/002-01-terminal-beautify.md",
+  "sourceDirName": ".",
+  "slug": "/002-01-terminal-beautify",
+  "permalink": "/docs/002-01-terminal-beautify",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Active Record and Data Mapper",
+    "permalink": "/docs/note-for-typeorm"
+  },
+  "next": {
+    "title": "管理ssh key的良好实践",
+    "permalink": "/docs/002-02-git-management"
+  }
+}

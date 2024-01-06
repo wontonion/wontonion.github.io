@@ -1,0 +1,25 @@
+{
+  "id": "002-04-add-TS-support",
+  "title": "Code with JavaScript program with TypeScript",
+  "description": "Especially for front-end framework. NestJs (the back-end framework) support TS originally.",
+  "source": "@site/docs/002-04-add-TS-support.md",
+  "sourceDirName": ".",
+  "slug": "/002-04-add-TS-support",
+  "permalink": "/docs/002-04-add-TS-support",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055,
+  "formattedLastUpdatedAt": "Oct 14, 2018",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Install Node.js and pnpm",
+    "permalink": "/docs/002-03-install-nodejs-and-pnpm"
+  },
+  "next": {
+    "title": "使用swc作为ts编译器",
+    "permalink": "/docs/003-01-use-swc-compile-ts"
+  }
+}
