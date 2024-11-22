@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'wontonion\'s github blog',
   tagline: 'STAY GOLD',
-  favicon: 'img/github_avatar.jpeg',
+  favicon: 'img/clean_avatar.png',
 
   // Set the production url of your site here
   url: 'https://wontonion.github.io',
@@ -67,11 +67,21 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: false,
+    },
     navbar: {
       title: 'wontonion',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'wontonion\'s github avatar',
+        src: 'img/clean_avatar.png',
+        style: {
+          width: '30px',
+          height: '30px',
+          borderRadius: '50%',
+        },
       },
       items: [
         // {
