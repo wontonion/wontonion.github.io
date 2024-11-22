@@ -5,9 +5,9 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'wontonion\'s site',
-  tagline: 'Love chaomein',
-  favicon: 'img/favicon.ico',
+  title: 'wontonion\'s github blog',
+  tagline: 'STAY GOLD',
+  favicon: 'img/github_avatar.jpeg',
 
   // Set the production url of your site here
   url: 'https://wontonion.github.io',
@@ -17,8 +17,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'wontonion', // Usually your GitHub org/user name.
+  projectName: 'wontonion.github.io', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -28,7 +28,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'en',
-    locales: ['en'],
+    locales: ['en','zh-Hans'],
   },
 
   presets: [

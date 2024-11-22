@@ -1,8 +1,9 @@
+import Layout from '@theme/Layout'
 import React from 'react'
 
 const My = () => {
   return (
-    <div>My</div>
+    <Layout>My</Layout>
   )
 }
 
