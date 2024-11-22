@@ -95,9 +95,13 @@ const config: Config = {
           label:'About',
           position:'right',
         },
-        {to: '/blog', label: 'Blog', position: 'right'},
         {
-          to:'/projects',
+          to: '/blog',
+          label: 'Blog',
+          position: 'right'
+        },
+        {
+          to:'/project',
           label:'Project',
           position:'right',
         },
