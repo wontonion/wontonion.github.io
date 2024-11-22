@@ -76,7 +76,7 @@ const config: Config = {
       title: 'wontonion',
       logo: {
         alt: 'wontonion\'s github avatar',
-        src: 'img/clean_avatar.png',
+        src: 'img/github_avatar.jpeg',
         style: {
           width: '30px',
           height: '30px',
