@@ -25,14 +25,14 @@ function HomepageHeader() {
           </div>
           
           {/* TODO: Add Resume Button */}
-          {/* <div className={styles.buttons}>
+          <div className={styles.resumeButton}>
             <Link
               className="button button--primary button--lg"
               // to="/docs/projects"
             >
               View My Resume🧾
             </Link>
-          </div> */}
+          </div>
 
           {/* Social Links */}
           <div className={styles.socialLinks}>

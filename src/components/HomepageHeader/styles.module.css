@@ -31,15 +31,15 @@
 
 .heroDescription {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .heroSubtitleAnimation {
   font-family: 'Geist Mono', monospace;
   font-weight: 500;
   height: 100px;
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .heroRight {
@@ -112,10 +112,11 @@
   }
 }
 
-.buttons {
+.resumeButton {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: start;
+  margin-bottom: 1rem;
 }
 
 
