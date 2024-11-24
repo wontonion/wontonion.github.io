@@ -17,7 +17,7 @@ export const experiences: Experience[] = [
     title: "Software Engineer💻",
     period: "2020 - 2024",
     company: "Foshan, Guangdong, China",
-    description: "This my first job being a software engineer. I was responsible for developing and maintaining the company's website and internal tools using Java and Spring Boot, equipped with MySQL and Redis. Really apperciate the opportunity to work and learn swith such a great team.",
+    description: "This my first job being a software engineer. I was responsible for developing and maintaining the company's website and internal tools using Java and Spring Boot, equipped with MySQL and Redis. Really apperciate the opportunity to work and learn with such a great team.",
   },
   {
     title: "Budget Planning Consultant🧮",
