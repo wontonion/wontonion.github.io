@@ -28,3 +28,10 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(94, 41, 41, 0.3);
 }
+
+.footer {
+  /* Match the background with your homepage or choose a custom color */
+  background-color: var(--ifm-background-color);
+  /* Or if you want a specific color, use something like: */
+  /* background-color: #1b1b1d; */
+}
