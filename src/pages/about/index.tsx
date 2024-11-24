@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 import Layout from '@theme/Layout';
-import clsx from 'clsx';
+import { experiences } from '@site/src/data/experiences';
 
 export default function Experience() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
@@ -30,45 +30,6 @@ export default function Experience() {
     return () => observer.disconnect();
   }, []);
 
-  const experiences = [
-    {
-      title: "Position Title 1",
-      period: "2022 - Present",
-      company: "Company Name",
-      achievements: [
-        "Key achievement or responsibility",
-        "Key achievement or responsibility"
-      ]
-    },
-    {
-      title: "Position Title 1",
-      period: "2022 - Present",
-      company: "Company Name",
-      achievements: [
-        "Key achievement or responsibility",
-        "Key achievement or responsibility"
-      ]
-    },
-    {
-      title: "Position Title 1",
-      period: "2022 - Present",
-      company: "Company Name",
-      achievements: [
-        "Key achievement or responsibility",
-        "Key achievement or responsibility"
-      ]
-    },
-    {
-      title: "Position Title 1",
-      period: "2022 - Present",
-      company: "Company Name",
-      achievements: [
-        "Key achievement or responsibility",
-        "Key achievement or responsibility"
-      ]
-    },
-  ];
-
   return (
     <Layout>
       <div className={styles.experienceSection}>
@@ -85,11 +46,16 @@ export default function Experience() {
               <h3>{exp.title}</h3>
               <div className={styles.period}>{exp.period}</div>
               <p>{exp.company}</p>
-              <ul>
-                {exp.achievements.map((achievement, i) => (
-                  <li key={i}>{achievement}</li>
-                ))}
-              </ul>
+              {exp.achievements && (
+                <ul>
+                  {exp.achievements.map((achievement, i) => (
+                    <li key={i}>{achievement}</li>
+                  ))}
+                </ul>
+              )}
+              {exp.description && (
+                <p>{exp.description}</p>
+              )}
             </div>
           ))}
         </div>
