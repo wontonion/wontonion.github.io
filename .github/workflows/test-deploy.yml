@@ -7,9 +7,10 @@ name: Test deployment
 on:
   pull_request:
     branches:
-      - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+      - dev
+  push:
+    branches:
+      - dev
 
 jobs:
   test-deploy:
@@ -26,6 +27,7 @@ jobs:
           cache: 'pnpm'
           
       - name: Install dependencies
-        run: pnpm
+        run: pnpm install
+        
       - name: Test build website
         run: pnpm build
