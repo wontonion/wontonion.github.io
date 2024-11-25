@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './styles.module.css';
 import { Project } from '../../data/project-description';
 
-interface ProjectModalProps extends Omit<Project, 'techStack'> {
+interface ProjectModalProps extends Omit<Project, 'summary'> {
   onClose: () => void;
 }
 
@@ -10,11 +10,11 @@ export default function ProjectModal({
   title, 
   description, 
   image = '', 
-  tags = [], 
+  techStack = [], 
   details = {
+    summary: '',
     challenge: '',
     solution: '',
-    techStack: [],
     links: {}
   }, 
   onClose 
@@ -28,9 +28,9 @@ export default function ProjectModal({
           <div className={styles.modalInfo}>
             <h2>{title}</h2>
             <p className={styles.description}>{description}</p>
-            {tags.length > 0 && (
+            {techStack.length > 0 && (
               <div className={styles.tags}>
-                {tags.map((tag, index) => (
+                {techStack.map((tag, index) => (
                   <span key={index} className={styles.tag}>{tag}</span>
                 ))}
               </div>
@@ -48,11 +48,11 @@ export default function ProjectModal({
                   <p>{details.solution}</p>
                 </>
               )}
-              {details.techStack?.length > 0 && (
+              {techStack.length > 0 && (
                 <>
                   <h3>Tech Stack</h3>
                   <div className={styles.techStack}>
-                    {details.techStack.map((tech, index) => (
+                    {techStack.map((tech, index) => (
                       <span key={index} className={styles.tech}>{tech}</span>
                     ))}
                   </div>
