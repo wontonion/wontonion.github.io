@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wontonion.github.io/zh-Hans/blog</id>
+    <title>wontonion's github blog Blog</title>
+    <updated>2023-11-22T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wontonion.github.io/zh-Hans/blog"/>
+    <subtitle>wontonion's github blog Blog</subtitle>
+    <icon>https://wontonion.github.io/zh-Hans/img/clean_avatar.png</icon>
+    <entry>
+        <title type="html"><![CDATA[使用 github.io 和 Docusaurus 搭建个人博客网站]]></title>
+        <id>https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus</id>
+        <link href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus"/>
+        <updated>2023-11-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="1-前期准备">1. 前期准备<a href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus#1-%E5%89%8D%E6%9C%9F%E5%87%86%EF%BF%BD%EF%BF%BD%E5%A4%87" class="hash-link" aria-label="1. 前期准备的直接链接" title="1. 前期准备的直接链接">​</a></h2>
+<p>创建博客之前，我们应该先对环境和软件做一些准备：</p>
+<ol>
+<li>Github帐号</li>
+<li>配置了和github互通的git环境，可参考<a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank" rel="noopener noreferrer">github官方文档</a>。或者使用github desktop。</li>
+<li>一个终端。</li>
+<li>vscode 或其他编辑器</li>
+<li>需要配置一下本地的nodejs环境，需要使用到npm这样的nodejs包管理工具，可自行搜索nodejs和npm的安装方式。npm在windows下有点问题，可以使用yarn。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="2-原理解释">2. 原理解释<a href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus#2-%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A" class="hash-link" aria-label="2. 原理解释的直接链接" title="2. 原理解释的直接链接">​</a></h2>
+<ol>
+<li>根据这个<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">链接</a>上的介绍，所有的github帐号都可以使用<code>username.github.io</code>这样一个网址来当作自己的免费域名。实现方法很简单，只需要创建一个名为<code>username.github.io</code>的repo即可。</li>
+<li>由于docusaurus是一个静态网站框架，我们写完了博客的<code>.md</code>文件之后网站并不会自动更新，而是需要重新编译整个网站完成更新。我们既可以直接上传编译好的build文件，也可以通过Github Action来实现CI/CD。这里的CI/CD就是commit写好的<code>.md</code>文件之后，由github来自动帮助我们完成编译和部署。因后者比较优雅，故本教程使用后者。</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="3-具体步骤">3. 具体步骤<a href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus#3-%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4" class="hash-link" aria-label="3. 具体步骤的直接链接" title="3. 具体步骤的直接链接">​</a></h2>
+<ol>
+<li>
+<p>可以先在github上创建一个<code>username.github.io</code>的仓库</p>
+</li>
+<li>
+<p>使用git 命令/github desktop，把仓库拉取到本地。</p>
+</li>
+<li>
+<p>进入仓库路径</p>
+</li>
+<li>
+<p>根据<a href="https://docusaurus.io/docs/installation" target="_blank" rel="noopener noreferrer">官方文档</a>的命令<code>npx create-docusaurus@latest my-website classic</code> 创建docursaurus应用，可以直接起名<code>my-website</code>。这个文件夹等下会删掉，问题不大，本文以该命令为准，使用<code>my-website</code>作为项目名称。</p>
+</li>
+<li>
+<p>根据<a href="https://docusaurus.io/docs/deployment#triggering-deployment-with-github-actions" target="_blank" rel="noopener noreferrer">官方文档</a>，在仓库目录中创建<code>.github</code>和<code>.github/workflows</code>两个文件夹。</p>
+</li>
+<li>
+<p>在<code>.github/workflows</code>中，创建上面文档中的两个文件<code>github/workflows/deploy.yml</code>和<code>.github/workflows/test-deploy.yml</code>，其中这两个文件中的<code>yarn</code>命令需要根据自己的包管理工具进行修改，修改方式见下图</p>
+</li>
+<li>
+<p>完成以上步骤后，把<code>my-website</code>中的所有文件剪切处理，放到和<code>.github</code>同一层下，如下图。然后可以删除空文件夹<code>my-website</code>。</p>
+</li>
+<li>
+<p>把仓库push到github上</p>
+</li>
+<li>
+<p>push完成后浏览器登录账户，进入该仓库，进行如下配置</p>
+</li>
+</ol>
+<p>在该步骤中，可能步骤3的gh-pages没得选，需要等待github编译完成后才会出现，可以进入这里查看github action的编译进度。首次编译成功才会出现该分支。</p>
+<ol start="10">
+<li>如果以上步骤顺利，等待github action编译完成就可以直接在浏览器地址栏输入网址<code>username.github.io</code>进行查看，现在应该看到的是docusaurus的tutorilal页面。<code>username</code>当然是你自己的github账户名字，不会看到这里才明白吧。</li>
+</ol>]]></content>
+        <author>
+            <name>wontonion</name>
+        </author>
+        <category label="github" term="github"/>
+        <category label="githubio" term="githubio"/>
+        <category label="blog" term="blog"/>
+        <category label="Docusaurus" term="Docusaurus"/>
+    </entry>
+</feed>

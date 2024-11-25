@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwontonion_github_io=self.webpackChunkwontonion_github_io||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"hello-blog","permalink":"/blog/2023/12/01/hello-blog","unlisted":false}]}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunktestpro=self.webpackChunktestpro||[]).push([[7472],{5513:s=>{s.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"\u4f7f\u7528 github.io \u548c Docusaurus \u642d\u5efa\u4e2a\u4eba\u535a\u5ba2\u7f51\u7ad9","permalink":"/zh-Hans/blog/githubio-blog-with-docusaurus","unlisted":false,"date":"2023-11-22T00:00:00.000Z"}]}')}}]);
