@@ -1,19 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xsl" href="atom.xsl"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wontonion.github.io/zh-Hans/blog</id>
-    <title>wontonion's github blog Blog</title>
-    <updated>2023-11-22T00:00:00.000Z</updated>
+    <title>wontonion's blog Blog</title>
+    <updated>2024-11-27T00:34:43.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wontonion.github.io/zh-Hans/blog"/>
-    <subtitle>wontonion's github blog Blog</subtitle>
+    <subtitle>wontonion's blog Blog</subtitle>
     <icon>https://wontonion.github.io/zh-Hans/img/clean_avatar.png</icon>
+    <entry>
+        <title type="html"><![CDATA[draft]]></title>
+        <id>https://wontonion.github.io/zh-Hans/blog/draft</id>
+        <link href="https://wontonion.github.io/zh-Hans/blog/draft"/>
+        <updated>2024-11-27T00:34:43.000Z</updated>
+        <summary type="html"><![CDATA[k-means]]></summary>
+        <content type="html"><![CDATA[<p>k-means</p>]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[使用 github.io 和 Docusaurus 搭建个人博客网站]]></title>
         <id>https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus</id>
         <link href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus"/>
         <updated>2023-11-22T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.]]></summary>
-        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="1-前期准备">1. 前期准备<a href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus#1-%E5%89%8D%E6%9C%9F%E5%87%86%EF%BF%BD%EF%BF%BD%E5%A4%87" class="hash-link" aria-label="1. 前期准备的直接链接" title="1. 前期准备的直接链接">​</a></h2>
+        <content type="html"><![CDATA[<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="1-前期准备">1. 前期准备<a href="https://wontonion.github.io/zh-Hans/blog/githubio-blog-with-docusaurus#1-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87" class="hash-link" aria-label="1. 前期准备的直接链接" title="1. 前期准备的直接链接">​</a></h2>
 <p>创建博客之前，我们应该先对环境和软件做一些准备：</p>
 <ol>
 <li>Github帐号</li>
