@@ -1,34 +1,38 @@
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Heading from "@theme/Heading";
 import clsx from "clsx";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import HeroSubtitleAnimation from "./HeroSubtitleAnimation";
+import { homepageContent, getAnimationTextsWithTagline } from "@site/src/data/homepageContent";
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
+  const animationTexts = getAnimationTextsWithTagline(siteConfig.tagline);
+
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className={styles.heroContainer}>
         {/* Left Column */}
         <div className={styles.heroLeft}>
           <Heading as="h1" className={styles.heroTitle}>
-            {"Hi, I'm Ethan"}
+            {homepageContent.greeting}
           </Heading>
 
           <div className={styles.heroSubtitleAnimation}>
-            <HeroSubtitleAnimation texts={["< " + siteConfig.tagline + " />", "< Developer />", "< Social Observer />", "< Student />"]}/>
+            <HeroSubtitleAnimation texts={animationTexts}/>
           </div>
 
           <div className={styles.heroDescription}>
-            {"I'm a software engineer with a curious mind of technology. I'm currently a master's student in Computer Science at Johns Hopkins University in Baltimore 🇺🇸."}
+            {homepageContent.description}
           </div>
           
           {/* TODO: Add Resume Button */}
           <div className={styles.resumeButton}>
             <Link
               className="button button--primary button--lg"
-              // to="/docs/projects"
+              to="/resume"
             >
               View My Resume🧾
             </Link>

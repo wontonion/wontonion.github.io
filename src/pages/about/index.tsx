@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 import Layout from '@theme/Layout';
-import { experiences } from '@site/src/data/experiences';
+import { experiences } from '@site/src/data/experiencesContent';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function Experience() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-
+  const {siteConfig} = useDocusaurusContext();
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -31,7 +32,9 @@ export default function Experience() {
   }, []);
 
   return (
-    <Layout>
+    <Layout
+      title={`About | ${siteConfig.title}`}
+      description="Yisheng Zhu's About">
       <div className={styles.experienceSection}>
         <div className={styles.experienceGrid}>
           {experiences.map((exp, index) => (
