@@ -24,11 +24,14 @@ function HomepageHeader() {
             <HeroSubtitleAnimation texts={animationTexts}/>
           </div>
 
+          <div className={styles.heroHashTag}>
+            {"#wontonion  #Ethan #Yisheng"}
+          </div>
+
           <div className={styles.heroDescription}>
             {homepageContent.description}
           </div>
           
-          {/* TODO: Add Resume Button */}
           <div className={styles.resumeButton}>
             <Link
               className="button button--primary button--lg"
