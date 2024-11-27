@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'wontonion\'s github blog',
+  title: 'wontonion\'s blog',
   tagline: 'STAY GOLD',
   favicon: 'img/clean_avatar.png',
 
@@ -155,7 +155,7 @@ const config: Config = {
       //     ],
       //   },
       // ],
-      copyright: `MIT Licence | Copyright © ${new Date().getFullYear()} wontonion. Built with Docusaurus.`,
+      copyright: `MIT Licensed | Copyright © ${new Date().getFullYear()} wontonion. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
