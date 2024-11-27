@@ -18,7 +18,7 @@ export const projectDescriptions: Project[] = [
   {
     title: "wontonion github blog #1",
     description: "My personal website built with Docusaurus.",
-    image: "/img/projects/blog_project.png",
+    image: "/img/project/blog_project.png",
     techStack: ["Docusaurus", "React", "TypeScript", "Node.js"],
     details: {
       summary: "This is my personal website built with Docusaurus...",
@@ -26,8 +26,7 @@ export const projectDescriptions: Project[] = [
       solution:
         "Leveraged Docusaurus for its powerful features and ease of use",
       links: {
-        github: "https://github.com/yourusername/blog",
-        demo: "https://yourblog.com",
+        github: "https://github.com/wontonion/wontonion.github.io",
       },
     },
   },
