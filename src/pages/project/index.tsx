@@ -3,15 +3,18 @@ import React, { useState } from 'react'
 import ProjectCard from '@site/src/components/ProjectCard'
 import ProjectModal from '@site/src/components/ProjectModal'
 import styles from './styles.module.css'
-import { projectDescriptions } from '@site/src/data/project-description'
+import { projectDescriptions } from '@site/src/data/projectContent'
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
 
   const projects = projectDescriptions;
-
+  const {siteConfig} = useDocusaurusContext();
   return (
-    <Layout>
+    <Layout
+      title={`Projects | ${siteConfig.title}`}
+      description="Yisheng Zhu's Projects">
       <div className={styles.projectsContainer}>
         <div className={styles.projectsGrid}>
           {projects.map((project, index) => (
