@@ -18,7 +18,7 @@ export const projectDescriptions: Project[] = [
   {
     title: "wontonion github blog #1",
     description: "My personal website built with Docusaurus.",
-    image: "/img/projects/blog_project.png",
+    image: "n/img/project/blog_project.png",
     techStack: ["Docusaurus", "React", "TypeScript", "Node.js"],
     details: {
       summary: "This is my personal website built with Docusaurus...",
