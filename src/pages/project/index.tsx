@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import ProjectCard from '@site/src/components/ProjectCard'
 import ProjectModal from '@site/src/components/ProjectModal'
 import styles from './styles.module.css'
-import { projectDescriptions } from '@site/src/data/projectContent'
+import { projectDescriptions } from '@site/src/data/content/projectContent'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 const Projects = () => {

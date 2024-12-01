@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import styles from './styles.module.css';
 import Layout from '@theme/Layout';
-import { experiences } from '@site/src/data/experiencesContent';
+import { experiences } from '@site/src/data/content/experiencesContent';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 export default function Experience() {
