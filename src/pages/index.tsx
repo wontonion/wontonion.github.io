@@ -9,9 +9,9 @@ export default function Home(): JSX.Element {
     <Layout
       title={` ${siteConfig.title}`}
       description="This is a blog for wontonion">
-      <main>
+      {/* <main className="main-container"> */}
         <HomepageHeader />
-      </main>
+      {/* </main> */}
     </Layout>
   );
 }

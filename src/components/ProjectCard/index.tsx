@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
-import { Project } from '../../data/projectContent';
+import { Project } from '../../data/content/projectContent';
 
 interface ProjectCardProps extends Pick<Project, 'title' | 'description' | 'image' | 'techStack'> {
   onClick: () => void;
