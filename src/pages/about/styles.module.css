@@ -44,7 +44,7 @@
 
 .experienceSection {
   min-height: 150vh;
-  background-image: url('/img/mountain-bg.jpeg');
+  /* background-image: url('/img/mountain-bg.jpeg'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

@@ -4,7 +4,7 @@ import Heading from "@theme/Heading";
 import clsx from "clsx";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import HeroSubtitleAnimation from "./HeroSubtitleAnimation";
-import { homepageContent, getAnimationTextsWithTagline } from "@site/src/data/homepageContent";
+import { homepageContent, getAnimationTextsWithTagline } from "@site/src/data/content/homepage";
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 function HomepageHeader() {
@@ -12,7 +12,7 @@ function HomepageHeader() {
   const animationTexts = getAnimationTextsWithTagline(siteConfig.tagline);
 
   return (
-    <header className={clsx(styles.heroBanner)}>
+    // <header className={clsx(styles.heroBanner)}>
       <div className={styles.heroContainer}>
         {/* Left Column */}
         <div className={styles.heroLeft}>
@@ -66,7 +66,7 @@ function HomepageHeader() {
           />
         </div>
       </div>
-    </header>
+    // </header>
   );
 }
 

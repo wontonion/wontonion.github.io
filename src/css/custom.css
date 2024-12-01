@@ -13,8 +13,22 @@
   --ifm-color-primary-light: #4ebaed;
   --ifm-color-primary-lighter: #5bbfee;
   --ifm-color-primary-lightest: #82cef2;
+  --ifm-background-color: #ffffff;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0);
+}
+
+/* Define different background for light theme */
+[data-theme='light'] {
+  --ifm-color-primary: #4ebaed;
+  --ifm-color-primary-dark: #1aa6e7;
+  --ifm-color-primary-darker: #179ddc;
+  --ifm-color-primary-darkest: #1382b5;
+  --ifm-color-primary-light: #5bbfee;
+  --ifm-color-primary-lighter: #69c4f0;
+  --ifm-color-primary-lightest: #82cef2;
+  --docusaurus-highlighted-code-line-bg:rgba(0, 0, 0, 0.2);
+  --global-background-image: url('/img/light_theme_tile.png');
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -27,11 +41,24 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(94, 41, 41, 0.3);
+  --global-background-image: url('/img/dark_theme_tile.webp');
+  /* --global-background-color: rgba(0, 0, 0, 0.2); */
 }
 
+html {
+  background-image: var(--global-background-image);
+  background-repeat: repeat;
+  /* min-height: 100vh; */
+  /* height: 100%; */
+  box-shadow: inset 0 0 0 1000px var(--global-background-color);
+}
+
+body {
+  min-height: 100vh;
+  background-color: transparent;
+}
+
+
 .footer {
-  /* Match the background with your homepage or choose a custom color */
   background-color: var(--ifm-background-color);
-  /* Or if you want a specific color, use something like: */
-  /* background-color: #1b1b1d; */
 }
