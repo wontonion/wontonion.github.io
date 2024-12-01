@@ -4,7 +4,7 @@
         <title>wontonion's blog Blog</title>
         <link>https://wontonion.github.io/blog</link>
         <description>wontonion's blog Blog</description>
-        <lastBuildDate>Wed, 27 Nov 2024 12:34:35 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 01 Dec 2024 20:43:30 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[draft]]></title>
             <link>https://wontonion.github.io/blog/draft</link>
             <guid>https://wontonion.github.io/blog/draft</guid>
-            <pubDate>Wed, 27 Nov 2024 12:34:35 GMT</pubDate>
+            <pubDate>Sun, 01 Dec 2024 20:43:30 GMT</pubDate>
             <description><![CDATA[k-means]]></description>
             <content:encoded><![CDATA[<p>k-means</p>]]></content:encoded>
         </item>

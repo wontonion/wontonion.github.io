@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://wontonion.github.io/blog</id>
     <title>wontonion's blog Blog</title>
-    <updated>2024-11-27T12:34:35.000Z</updated>
+    <updated>2024-12-01T20:43:30.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://wontonion.github.io/blog"/>
     <subtitle>wontonion's blog Blog</subtitle>
@@ -11,7 +11,7 @@
         <title type="html"><![CDATA[draft]]></title>
         <id>https://wontonion.github.io/blog/draft</id>
         <link href="https://wontonion.github.io/blog/draft"/>
-        <updated>2024-11-27T12:34:35.000Z</updated>
+        <updated>2024-12-01T20:43:30.000Z</updated>
         <summary type="html"><![CDATA[k-means]]></summary>
         <content type="html"><![CDATA[<p>k-means</p>]]></content>
     </entry>
