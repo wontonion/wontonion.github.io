@@ -4,7 +4,7 @@
         <title>wontonion's blog Blog</title>
         <link>https://wontonion.github.io/blog</link>
         <description>wontonion's blog Blog</description>
-        <lastBuildDate>Sun, 01 Dec 2024 20:43:30 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 07 Dec 2024 16:40:05 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
@@ -12,7 +12,7 @@
             <title><![CDATA[draft]]></title>
             <link>https://wontonion.github.io/blog/draft</link>
             <guid>https://wontonion.github.io/blog/draft</guid>
-            <pubDate>Sun, 01 Dec 2024 20:43:30 GMT</pubDate>
+            <pubDate>Sat, 07 Dec 2024 16:40:05 GMT</pubDate>
             <description><![CDATA[k-means]]></description>
             <content:encoded><![CDATA[<p>k-means</p>]]></content:encoded>
         </item>
@@ -22,7 +22,7 @@
             <guid>https://wontonion.github.io/blog/githubio-blog-with-docusaurus</guid>
             <pubDate>Wed, 22 Nov 2023 00:00:00 GMT</pubDate>
             <description><![CDATA[This blog is going to teach everyone how to build a github blog with URL like `username.github.io` with a popular document framework Docusaurus. Here, `username` refers to the nickname of your Github account.]]></description>
-            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="1-前期准备">1. 前期准备<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#1-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87" class="hash-link" aria-label="Direct link to 1. 前期准备" title="Direct link to 1. 前期准备">​</a></h2>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_wsE1" id="1-前期准备">1. 前期准备<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#1-%E5%89%8D%E6%9C%9F%E5%87%86%E5%A4%87" class="hash-link" aria-label="Direct link to 1. 前期准备" title="Direct link to 1. 前期准备">​</a></h2>
 <p>创建博客之前，我们应该先对环境和软件做一些准备：</p>
 <ol>
 <li>Github帐号</li>
@@ -31,12 +31,12 @@
 <li>vscode 或其他编辑器</li>
 <li>需要配置一下本地的nodejs环境，需要使用到npm这样的nodejs包管理工具，可自行搜索nodejs和npm的安装方式。npm在windows下有点问题，可以使用yarn。</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="2-原理解释">2. 原理解释<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#2-%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A" class="hash-link" aria-label="Direct link to 2. 原理解释" title="Direct link to 2. 原理解释">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_wsE1" id="2-原理解释">2. 原理解释<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#2-%E5%8E%9F%E7%90%86%E8%A7%A3%E9%87%8A" class="hash-link" aria-label="Direct link to 2. 原理解释" title="Direct link to 2. 原理解释">​</a></h2>
 <ol>
 <li>根据这个<a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">链接</a>上的介绍，所有的github帐号都可以使用<code>username.github.io</code>这样一个网址来当作自己的免费域名。实现方法很简单，只需要创建一个名为<code>username.github.io</code>的repo即可。</li>
 <li>由于docusaurus是一个静态网站框架，我们写完了博客的<code>.md</code>文件之后网站并不会自动更新，而是需要重新编译整个网站完成更新。我们既可以直接上传编译好的build文件，也可以通过Github Action来实现CI/CD。这里的CI/CD就是commit写好的<code>.md</code>文件之后，由github来自动帮助我们完成编译和部署。因后者比较优雅，故本教程使用后者。</li>
 </ol>
-<h2 class="anchor anchorWithStickyNavbar_L9Hi" id="3-具体步骤">3. 具体步骤<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#3-%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4" class="hash-link" aria-label="Direct link to 3. 具体步骤" title="Direct link to 3. 具体步骤">​</a></h2>
+<h2 class="anchor anchorWithStickyNavbar_wsE1" id="3-具体步骤">3. 具体步骤<a href="https://wontonion.github.io/blog/githubio-blog-with-docusaurus#3-%E5%85%B7%E4%BD%93%E6%AD%A5%E9%AA%A4" class="hash-link" aria-label="Direct link to 3. 具体步骤" title="Direct link to 3. 具体步骤">​</a></h2>
 <ol>
 <li>
 <p>可以先在github上创建一个<code>username.github.io</code>的仓库</p>
