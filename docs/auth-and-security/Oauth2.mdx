@@ -1,0 +1,42 @@
+# Story of OAuth2
+
+OAuth2 is a protocol that allows a user to grant a third-party web site or application access to the user's protected resources, without necessarily revealing their long-term credentials or even their identity. This is done by authorizing the third-party application to access the user's resources on their behalf. OAuth2 is a widely used protocol for authorization and is used by many companies like Google, Facebook, and Twitter.
+
+## scenario when OAuth2 is used
+Say, you want to log in to a website using your Google account. The website will redirect you to Google's login page. You will enter your Google credentials and Google will authenticate you. After successful authentication, Google will ask you if you want to grant the website access to your Google account. If you grant access, Google will send an access token to the website. The website can use this access token to access your Google account on your behalf. 
+
+So there are two things happening here:
+1. Google authenticates you. 
+2. Google authorizes the website to access your Google account on your behalf with an access token.
+
+
+## OAuth2 grant types
+Grant types are the ways in which a client can get an access token. OAuth2 defines 4 grant types for different use cases. The most common grant types is authorization code Grant.
+
+### authorization code Grant
+This is the most commonly used and safest grant type. Using the above example, authorization code grant contains the following steps:
+let's say the website called "cellotape"
+1. When user click the log in with Google button on cellotape, cellotape will redirect the user to Google's login page.
+2. User will enter their Google credentials and Google will authenticate the user.
+3. After successful authentication, Google will ask the user if they want to grant cellotape access to their Google account.
+4. If the user grants access, Google will redirect the user back to cellotape with an authorization code. In this step, Google send the authorization code to cellotape's frontend.
+5. Cellotape's frontend will send the authorization code to cellotape's backend. 
+6. Cellotape's backend will send the authorization code to Google's token endpoint along with the client id and client secret.
+7. Google will verify the authorization code and client id and client secret. If everything is correct, Google will send an access token to cellotape's backend.
+8. Cellotape's backend will store the access token and use it to access the user's Google account on their behalf.
+
+After these steps, when user send request to cellotape, cellotape will use the access token to access the user's Google account:
+1. User send request to cellotape.
+2. Cellotape's backend will handle the request and use the access token to access the user's Google account.
+3. Cellotape's backend will return the data to cellotape's backend.
+4. Cellotape's frontend will display the data to the user.
+
+The authentication code is passes via frontend, and the token is stored in the backend. This is the most secure way to get the token.
+
+## Where goes the OAuth1.0?
+OAuth 1.0 is the predecessor of OAuth 2.0. OAuth 1.0 is more complex and less secure than OAuth 2.0. OAuth 1.0 uses digital signatures to authenticate the client and the server. It is much more complex than OAuth 2.0, which uses access tokens to authenticate the client and the server. 
+
+
+
+reference:
+(OAuth 1.0 Vs OAuth 2.0)[https://medium.com/identity-beyond-borders/oauth-1-0-vs-oauth-2-0-e36f8924a835]
