@@ -1,0 +1,31 @@
+# Program
+A program is a set of instructions and associated data that resides on the disk and is loaded by the operating system to perform some task. An executable file or a python script file are examples of programs. In order to run a program, the operating system’s kernel is first asked to create a new process, which is an environment in which a program executes.
+
+# Process
+A process is a program in execution. A process is an execution environment that consists of instructions, user-data, and system-data segments, as well as lots of other resources such as CPU, memory, address-space, disk and network I/O acquired at runtime. A program can have several copies of it running at the same time but a process necessarily belongs to only one program.
+
+# Thread
+Thread is the smallest unit of execution in a process. A thread simply executes instructions serially.
+A process can have multiple threads running as part of it. Usually, there would be some state associated with the process that is shared among all the threads and in turn each thread would have some state private to itself. The globally shared state amongst the threads of a process is visible and accessible to all the threads, and special attention needs to be paid when any thread tries to read or write to this global shared state.
+
+# Concurrency and Parallelism
+## Serial execution
+When programs are serially executed, they are scheduled one at a time on the CPU. Once a task gets completed, the next one gets a chance to run. Each task is run from the beginning to the end without interruption. 
+
+## Concurrent execution
+A concurrent program is one that can be decomposed into constituent parts and each part can be executed out of order or in partial order without affecting the final outcome. 
+A system capable of running several distinct programs or more than one independent unit of the same program in overlapping time intervals is called a concurrent system.
+A concurrent system can have two programs in progress at the same time where progress doesn’t imply execution. One program can be suspended while the other executes. Both programs are able to make progress as their execution is interleaved.
+In concurrent systems, the goal is to maximize throughput and minimize latency. For example, a browser running on a single core machine has to be responsive to user clicks but also be able to render HTML on screen as quickly as possible. Concurrent systems achieve lower latency and higher throughput when programs running on the system require frequent network or disk I/O.
+
+
+The classic example of a concurrent system is that of an operating system running on a single core machine. Such an operating system is concurrent but not parallel. It can only process one task at any given point in time but all the tasks being managed by the operating system appear to make progress because the operating system is designed for concurrency. Each task gets a slice of the CPU time to execute and move forward.
+
+## Parallel execution
+A parallel system is one which necessarily has the ability to execute multiple programs at the same time. 
+Usually, this capability is aided by hardware in the form of multicore processors on individual machines or as computing clusters where several machines are hooked up to solve independent pieces of a problem simultaneously. Remember an individual problem has to be concurrent in nature, that is portions of it can be worked on independently without affecting the final outcome before it can be executed in parallel.
+
+## Concurrency vs Parallelism
+concurrency is not necessarily parallelism, whereas a parallel system is indeed concurrent.
+Additionally, a system can be both concurrent and parallel e.g. a multitasking operating system running on a multicore machine.
+

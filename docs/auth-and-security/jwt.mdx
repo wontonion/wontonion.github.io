@@ -1,0 +1,83 @@
+# The story of JWT
+
+## Start with session
+
+### session
+Before look into JWT, let's see how did it come out. Image a authentication scenario.
+
+1. User login with username and password, which means client sending with username and password to server.
+2. Server verify the username and password, if it's correct, server will store the user information in session. Here, the session is a piece of data stored user information especially the login state in server side.
+3. Then server will return a session id to client, which is stored in cookie. Cookie is stored in client side, beyond session id, it also stored other information like expiration time, domain, etc.
+4. Every time client send request to server, it will bring the cookie with session id. Server will verify the session id in cookie, if it's correct, server will return the data to client.
+
+Take a real world scenario to explain the above steps. Say, you want to do shopping on a website
+1. You log in your account with username and password. If your username and password are correct, the server will store your user information in session.
+2. The server will return a session id to your browser, which is stored in cookie.
+3. You add some items to your shopping cart. It may be stored in cookie, and may be stored in server side. If it's stored in server side, the server will authenticate your identity with the session id in cookie. That means you will send cart information with session id to server.
+
+So, this is how session works. But there are some problems with session.
+
+### Problem with session
+From the example above we can see there is the user state is stored in server side. It means the server need to store the user state for every user. If there are millions of users, the server need to store millions of user state. It's a huge burden for server.
+
+And if there is only one server, what if the server is down? The user state will be lost. Maybe you choose to scale the server, but it's not a good solution. Because the user state is stored in server side, if you scale the server, you need to synchronize the user state between servers. It brings in more complexity.
+
+One solution is to write the user state in database. But it's still not a good solution. Because every time the client send request to server, the server need to read the user state from database. Then it will be a performance issue.
+
+Another solution is to store the user state in client side. Here comes the JWT.
+
+## Json Web Token
+Json Web Token(JWT) uses JSON objects to achieve authentication. This token works like a ticket with time limit. In this case, after client is authenticated, the server will give a token to client. The client will store the token in cookie or local storage. Every time the client send request to server, it will bring the token. The server will verify the token, if it's correct, the server will return the data to client.
+
+## what's inside the token
+The token is a encrypted string. It can be divided into three parts: header, payload and signature. Each part is divided by dot(.). It looks like,
+```
+xxxxx.yyyyy.zzzzz
+```
+The header and payload are JSON objects, and the signature is the encrypted string of above two piece of information.
+- header: a json object, which contains the algorithm and token type.
+- payload: a json object, which contains the user information, expiration time, etc.(you can also add custom information)
+- signature: the encrypted string of above two parts.
+
+### header
+The header is a json object, which contains the algorithm and token type. 
+```json
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+```
+Usually, the header is encoded by Base64Url in the final encrypted string.
+### payload 
+The payload is a json object, which contains the user information, expiration time, etc. You can also add custom information.
+```json
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "iat": 1516239022
+}
+```
+The payload is also encoded by Base64Url in the final encrypted string.
+
+### signature
+The signature warp the header and payload. And then encrypt the warp string with secret key. The algorithm is HMACSHA256. The final encrypted string is the signature. The signature is used guarantee the token is not tampered with.
+```
+HMACSHA256(
+  base64UrlEncode(header) + "." +
+  base64UrlEncode(payload),
+  secret)
+```
+
+## Deficits of JWT
+- Since JWT doesn't store the user state in server side, server cannot dispose or modify the token until it's expired. It means if the token is stolen, the thief can use the token to access the server until it's expired.
+- In order to prevent the stolen of JWT token, the expiration time should be set as short as possible. 
+- Also, transfer the token with HTTPS is a good practice since https is more secure than http.
+
+
+## used in passport.js
+
+
+reference:
+- (Introduction to JSON Web Tokens)[https://jwt.io/introduction/]   
+- (Sessionless Authentication using JWTs (with Node + Express + Passport JS))[https://medium.com/@bryanmanuele/sessionless-authentication-withe-jwts-with-node-express-passport-js-69b059e4b22c]
+

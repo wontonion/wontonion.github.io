@@ -41,7 +41,7 @@ But we need more to cooperate with `react-hook-form` and `zod`.
 
 ### An example of `Form` in Shadcn with `react-hook-form` and `zod`
 #### 1. Create a schema with `zod`.
-  ```tsx showLineNumbers
+```tsx showLineNumbers
 "use client"
 
 import { z } from "zod"
@@ -49,7 +49,7 @@ import { z } from "zod"
 const formSchema = z.object({
     username: z.string().min(2).max(50),
     })
-  ```
+```
     - `zod` is a schema declaration and validation library for TypeScript.
     - The reason why we use `"use client"` is that `zod` is a client-side library.
     - `z.object({})` is a function that creates a schema for an object.
