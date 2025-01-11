@@ -1,0 +1,71 @@
+# Mutex, Semaphore, Monitor
+
+## Mutex vs Semaphore
+Mutex only allows one thread that has locked the mutex to release it. Here comes the concept of ownership.So that mutex involves ownership, but semaphore does't have.
+
+Semaphore allows multiple threads to access the shared resource. But when relase the semaphore, it doesn't need to be the thread that locked the semaphore to release. So, semaphore doesn't involve ownership. Here, Semaphore allows the signal transmission between threads, but mutex doesn't.
+
+## Predicate
+In the context of multi-threading or concurrency or parallelism, a predicate means a condition that allows the program to proceed in a certain way. A predicate is a boolean expression that evaluates to true or false.
+
+## Monitor
+In Java, Monitor exists in the form of synchronized blocks or methods. But at the very beginning, you can imagine that monitor is a combination of mutex and condition variable. Let's see the following example. The first example is an exampl of "spin waiting" and the second example is a solution to "spin waiting".
+
+```Java
+void busyWaitFunction() {
+  // acquire mutex
+  while (predicate is false){
+    // release mutex
+   // acquire mutex
+}
+  // do something useful
+ // release mutex
+}
+```
+Within the first example, a thread will keep spinning in the while loop until the predicate becomes true. This is called "spin waiting". This is a waste of CPU cycles. In this example, other threads can only change the predicate when the current thread releases the mutex. But if the current thread is acquire the mutex so soon, other threads can hardly change the predicate. 
+
+The solution to above problem is to use condition variable. The condition variable is a mechanism that allows a thread to wait for a certain condition to become true. When the condition becomes true, the thread is notified and can proceed. The following is an example of using condition variable.
+```Java
+  voidefficientWaitingFunction() 
+{
+  mutex.acquire() 
+  while (predicate == false) {
+    condVar.wait()
+  }
+ // Do something useful
+  mutex.release()
+}
+
+void changePredicate(){
+  mutex.acquire()
+  set predicate = true
+  condVar.signal()
+  mutex.release()
+}
+```
+In the second example, the thread will wait for the predicate to become true. But here a variable called `condVar` is used to wait for the predicate to become true. When the predicate becomes true, the thread is notified and can proceed. This is called "efficient waiting". The `condVar.wait()` will release the mutex and wait for the predicate to become true. You can imagine that there is a waiting room, once invoke `condVar.wait()`, the thread will go to the waiting room and wait for `conVar.signal()` to be notified, once got signaled, the thread come back to work from rest.
+
+### why use `while` instead of `if` in the condition variable
+Noticed that we didn't use `if` in the condition variable, but `while`. By using `while`, we can avoid something called "spurious wakeup". The "spurious wakeup" means that a thread can wake up without being notified. How can this happen? The reason is that the thread can wake up by some signal, however, when the signaled thread check the predicate, the predicate is still false since some other thread change the predicate during "woking up". So, the thread should go back to the waiting room and wait for the predicate to become true again. 
+
+If we use `if`, the thread will go to work without checking the predicate again, which is wrong. In the if case, we need to guarantee that the predicate won't be changed during the "waking up" process. But in the real world, we can't guarantee that. So, we use `while` to avoid "spurious wakeup".
+
+Thus, it becomes a convention to use `while` instead of `if` in the condition variable.
+
+### definition of monitor
+After the above discussion, we can now realize that a monitor is made up of a mutex and one or more condition variables. A single monitor can have multiple condition variables but not vice versa. 
+
+Theoretically, another way to think about a monitor is to consider it as an entity having two queues or sets where threads can be placed. One is the entry set and the other is the wait set. When a thread A enters a monitor it is placed into the entry set. If no other thread owns the monitor, which is equivalent of saying no thread is actively executing within the monitor section, then thread A will acquire the monitor and is said to own it too. Thread A will continue to execute within the monitor section till it exits the monitor or calls wait() on an associated condition variable and be placed into the wait set. While thread A owns the monitor no other thread will be able to execute any of the critical sections protected by the monitor. New threads requesting ownership of the monitor get placed into the entry set.
+
+### Every object in Java has a monitor
+Practically, in Java each object is a monitor and implicitly has a lock and is a condition variable too. You can think of a monitor as a mutex with a wait set. Monitors allow threads to exercise mutual exclusion as well as cooperation by allowing them to wait and signal on conditions.
+
+## Categories of monitor
+There are two categories of monitor, mesa style and hoare style. The difference between them is how the condition variable works. In mesa style, the condition variable can be signaled without the mutex being held. In hoare style, the condition variable can only be signaled when the mutex is held. Java uses mesa style. Java uses mesa style. Mesa style is more practical and efficient than hoare style.
+
+## Optimistic vs Pessimistic locking
+Optimistic locking is a strategy where a thread doesn't acquire a lock before accessing a shared resource. Instead, it accesses the shared resource and checks if the resource has been modified by another thread. If the resource has been modified, the thread retries the operation. Optimistic locking is used when the probability of contention is low. Pessimistic locking is a strategy where a thread acquires a lock before accessing a shared resource. Pessimistic locking is used when the probability of contention is high.
+
+
+
+

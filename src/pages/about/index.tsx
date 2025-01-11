@@ -7,6 +7,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 export default function Experience() {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const {siteConfig} = useDocusaurusContext();
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -19,8 +20,8 @@ export default function Experience() {
         });
       },
       {
-        threshold: 0.5,
-        rootMargin: '-100px 0px -100px 0px'
+        threshold: 0.2,
+        rootMargin: '-50px 0px -50px 0px'
       }
     );
 
@@ -36,7 +37,7 @@ export default function Experience() {
       title={`About | ${siteConfig.title}`}
       description="Yisheng Zhu's About">
       <div className={styles.experienceSection}>
-        <div className={styles.experienceGrid}>
+        <div className={styles.timeline}>
           {experiences.map((exp, index) => (
             <div
               key={index}

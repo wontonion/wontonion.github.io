@@ -1,160 +1,104 @@
-
-.experience-section {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .experience-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .experience-card {
-    background: var(--ifm-background-surface-color);
-    border-radius: 12px;
-    padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-  }
-  
-  .experience-card:hover {
-    transform: translateY(-4px);
-  }
-  
-  .experience-card h3 {
-    /* margin-bottom: 0rem; */
-    color: var(--ifm-color-primary);
-  }
-  
-  .experience-card .period {
-    font-size: 0.9rem;
-    color: var(--ifm-color-gray-600);
-    margin-bottom: 1rem;
-  }
-  
-  /* Make it responsive */
-  @media (max-width: 768px) {
-    .experience-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-
 .experienceSection {
-  min-height: 150vh;
-  /* background-image: url('/img/mountain-bg.jpeg'); */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  position: relative;
   padding: 4rem 2rem;
-}
-
-/* Dark theme (default) */
-.experienceSection::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* Dark overlay */
-  z-index: 1;
-}
-
-/* Light theme */
-[data-theme='light'] .experienceSection::before {
-  background: rgba(255, 255, 255, 0); /* Light overlay */
-}
-
-/* Adjust card appearance for light theme */
-[data-theme='light'] .experienceCard {
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--ifm-color-gray-900);
-}
-
-/* Adjust connecting lines for light theme */
-[data-theme='light'] .experienceCard::before {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.experienceGrid {
-  position: relative;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--ifm-color-primary);
 }
 
 .experienceCard {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+  position: relative;
+  width: calc(50% - 30px);
+  margin: 2rem 0;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  background: var(--ifm-card-background-color);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transition: all 0.8s ease;
-  width: 45%;
-  margin-bottom: 4rem;
-  transform: translateY(50px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Position cards alternately left and right, climbing up */
-.experienceCard:nth-child(odd) {
-  align-self: flex-start;
-  transform: translateX(-50px) translateY(50px);
-}
-
-.experienceCard:nth-child(even) {
-  align-self: flex-end;
-  transform: translateX(50px) translateY(50px);
-}
-
-/* Visible state for cards */
-.experienceCard.visible {
-  opacity: 1;
-  transform: translateX(0) translateY(0);
-}
-
-/* Create climbing path effect with pseudo-elements */
 .experienceCard::before {
   content: '';
   position: absolute;
-  width: 2px;
-  height: 4rem;
-  background: rgba(255, 255, 255, 0.3);
-  z-index: -1;
+  top: 50%;
+  width: 20px;
+  height: 20px;
+  background: var(--ifm-color-primary);
+  border-radius: 50%;
+}
+
+.experienceCard:nth-child(odd) {
+  left: 0;
+  padding-right: 30px;
 }
 
 .experienceCard:nth-child(odd)::before {
-  right: -2rem;
-  top: 100%;
-  transform: rotate(45deg);
+  right: -40px;
+}
+
+.experienceCard:nth-child(even) {
+  left: 50%;
+  padding-left: 30px;
+  margin-left: 30px;
 }
 
 .experienceCard:nth-child(even)::before {
-  left: -2rem;
-  top: 100%;
-  transform: rotate(-45deg);
+  left: -40px;
 }
 
-/* Adjust for mobile */
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.period {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.experienceCard h3 {
+  margin-bottom: 0.5rem;
+  color: var(--ifm-heading-color);
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .experienceCard {
-    width: 85%;
+  .timeline::before {
+    left: 30px;
   }
-  
+
+  .experienceCard {
+    width: calc(100% - 60px);
+    margin-left: 60px;
+  }
+
   .experienceCard:nth-child(odd),
   .experienceCard:nth-child(even) {
-    align-self: center;
-    transform: translateY(50px);
+    left: 0;
+    padding-left: 30px;
+    padding-right: 30px;
   }
-  
-  .experienceCard.visible {
-    transform: translateY(0);
+
+  .experienceCard:nth-child(odd)::before,
+  .experienceCard:nth-child(even)::before {
+    left: -45px;
   }
 }
