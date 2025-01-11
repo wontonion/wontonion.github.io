@@ -84,23 +84,23 @@ const config: Config = {
         },
       },
       items: [
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
         {
           to:'/about',
           label:'About',
           position:'right',
         },
         {
-          to: '/blog',
-          label: 'Blog',
-          position: 'right'
-        },
-        {
+            to: '/docs',
+            label: 'Docs',
+            position: 'right'
+          },
+          // {
+          //   type: 'docSidebar',
+          //   sidebarId: 'tutorialSidebar',
+          //   position: 'left',
+          //   label: 'Tutorial',
+          // },
+          {
           to:'/project',
           label:'Project',
           position:'right',
