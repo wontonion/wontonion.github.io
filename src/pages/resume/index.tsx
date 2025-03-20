@@ -12,7 +12,7 @@ export default function Resume(): JSX.Element {
       <main className="container margin-vert--lg">
         <div className="resume-container">
           <iframe
-            src="/files/YishengZhuResume.pdf"
+            src="/files/EthanResume.pdf"
             style={{
               width: '100%',
               height: '100vh',
